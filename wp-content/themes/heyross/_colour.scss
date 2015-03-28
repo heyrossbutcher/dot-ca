@@ -1,3 +1,5 @@
+// _colour.scss
+$default: #ffffff;
 $grayblue:    #4682B4;
 $maroon:    #A11E0B;
 $burntorange:    #DAA520;
@@ -11,7 +13,7 @@ $green:    #579F43;
 $red:    #EE4846;
 $darkgray:    #515151;
 $pink:    #ED1E79;
-$black:    #000000;
+$black:    rgba(0,0,0,0.8);
 $yelloworange:    #FFC61E;
 $lightblue:    #00B0F9;
 $lightorange:    #FF7A00;
@@ -19,3 +21,4 @@ $deeppurple:    #58266A;
 $deepblue:    #312A68;
 $lightgray:    #808080;
 $mediumblue:    #005487;
+$border:  rgba(0,0,0,0.25);

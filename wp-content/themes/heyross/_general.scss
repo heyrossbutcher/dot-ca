@@ -1,0 +1,116 @@
+
+////////////////////////////////////////////////////
+/////CUSTOM STYLES
+//////////////////////////////////////////////////
+///GENERAL//////////////////////////
+section{
+}
+.wrapper{
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: $main-font-size;
+  font-family: $body-font;
+}
+.innerWrapper{
+  max-width: 760px;
+  margin: 0 auto;
+}
+.blogWrapper{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 3rem;
+  font-family: $display-font;
+  margin: 0;
+  padding: 15px 45px 15px 30px;
+  background: $black;
+  display: inline;
+  //
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  a{
+    color: $default;
+    text-decoration: none;
+  }
+}
+.title{
+  width: 100%;
+  text-align: center;
+}
+h2{
+  font-family: $display-font; 
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $black;
+  margin-bottom: 35px;
+  display: inline-block;
+}
+///HEADER//////////////////////////
+header{
+  .masthead{
+    height: 130px;
+    position: relative;
+  }
+}
+.jumbotron{
+  width: 1100px;
+  min-width: 1100px;
+  margin: 0;
+  padding: 0;
+}
+nav{
+  max-width: 760px;
+  margin: 0 auto;
+  margin-top: 25px;
+   ul.menu {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline;
+      float: left;
+      margin: 0;
+      text-align: center;
+      width: 25%;
+      a{
+        color: $black;
+        text-transform: uppercase;
+        text-decoration: none;
+        max-width: 100%;
+        border: 1px solid $border;
+        border-left: none;
+        background: $default;
+        display: block;
+        padding: 15px 0;
+        &:hover{
+          color: lighten( $default, 80% );
+          background: $black;
+        }
+      }
+    }
+    li:first-child{
+      border-left: 1px solid $border;
+    }
+   }
+}
+///ABOUT//////////////////////////
+.about{
+  margin-top: 100px;
+}
+.work{
+  margin-top: 100px;
+}
+.thoughts{
+  margin-top: 100px;
+}
+.contact{
+  margin-top: 100px;
+}
+.thanks{
+  margin-top: 100px;
+}
+

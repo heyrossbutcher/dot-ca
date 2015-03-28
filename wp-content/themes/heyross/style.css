@@ -131,10 +131,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0; }
 
 .clearfix:after {
   content: " ";
@@ -178,26 +182,20 @@ img.alignright {
                    Default Styling
    ========================================================================== */
 body {
-  color: #333; }
+  color: #333;
+  background: #ffffff; }
 
 .container {
-  max-width: 100%;
-  margin: 0 auto; }
+  max-width: 100%; }
 
 .content {
-  float: left; }
+  float: left;
+  width: 100%; }
 
 .full {
   width: 100%; }
 
 /* links */
-a {
-  color: #BA209B;
-  text-decoration: none; }
-
-a:hover {
-  color: #D424B1; }
-
 /* paragraphs */
 p {
   line-height: 1.8; }
@@ -228,9 +226,6 @@ dd {
   margin-left: 10px; }
 
 /*lists*/
-ul li, ol li {
-  padding: 3px; }
-
 /*PRE*/
 pre {
   background: #F7F7F7;
@@ -261,20 +256,6 @@ footer {
 /* =============================================================================
                    Navigation
    ========================================================================== */
-ul.menu {
-  margin: 0;
-  padding: 0; }
-
-ul.menu li {
-  display: inline;
-  margin-right: 10px; }
-
-ul.menu li a {
-  color: #333;
-  padding: 10px;
-  background: #333;
-  color: white; }
-
 /* =============================================================================
                    Comment Styling
    ========================================================================== */
@@ -447,20 +428,100 @@ p.form-allowed-tags, .nocomments {
 #respond p, #comments-list ul #respond {
   margin: 0; }
 
-header {
-  background: #4682B4; }
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-family: 'Lato', sans-serif; }
+
+.innerWrapper {
+  max-width: 760px;
+  margin: 0 auto; }
+
+.blogWrapper {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 15px 45px 15px 30px;
+  background: rgba(0, 0, 0, 0.8);
+  display: inline;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  h1 a {
+    color: #ffffff;
+    text-decoration: none; }
+
+.title {
+  width: 100%;
+  text-align: center; }
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  margin-bottom: 35px;
+  display: inline-block; }
+
+header .masthead {
+  height: 130px;
+  position: relative; }
+
+.jumbotron {
+  width: 1100px;
+  min-width: 1100px;
+  margin: 0;
+  padding: 0; }
+
+nav {
+  max-width: 760px;
+  margin: 0 auto;
+  margin-top: 25px; }
+  nav ul.menu {
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
+    nav ul.menu li {
+      display: inline;
+      float: left;
+      margin: 0;
+      text-align: center;
+      width: 25%; }
+      nav ul.menu li a {
+        color: rgba(0, 0, 0, 0.8);
+        text-transform: uppercase;
+        text-decoration: none;
+        max-width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-left: none;
+        background: #ffffff;
+        display: block;
+        padding: 15px 0; }
+        nav ul.menu li a:hover {
+          color: white;
+          background: rgba(0, 0, 0, 0.8); }
+    nav ul.menu li:first-child {
+      border-left: 1px solid rgba(0, 0, 0, 0.25); }
 
 .about {
-  background: #A11E0B; }
+  margin-top: 100px; }
 
 .work {
-  background: #DAA520; }
+  margin-top: 100px; }
 
 .thoughts {
-  background: #00CED1; }
+  margin-top: 100px; }
 
 .contact {
-  background: #9E0050; }
+  margin-top: 100px; }
 
 .thanks {
-  background: #579F43; }
+  margin-top: 100px; }
