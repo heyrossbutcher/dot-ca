@@ -10,6 +10,8 @@ section{
   margin: 0 auto;
   font-size: $main-font-size;
   font-family: $body-font;
+  font-weight: 300;
+  position: relative;
 }
 .innerWrapper{
   max-width: 760px;
@@ -24,7 +26,7 @@ h1{
   font-size: 3rem;
   font-family: $display-font;
   margin: 0;
-  padding: 15px 45px 15px 30px;
+  padding: 12px 45px 12px 30px;
   background: $black;
   display: inline;
   //
@@ -52,8 +54,13 @@ h2{
 ///HEADER//////////////////////////
 header{
   .masthead{
-    height: 130px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 100;  
+    width: 1100px;
+    height: 120px;
+    background: $default;  
+    // border: 1px solid $border;
   }
 }
 .jumbotron{
@@ -61,15 +68,29 @@ header{
   min-width: 1100px;
   margin: 0;
   padding: 0;
+  margin-top: 130px;
+}
+.top_nav{
+  // left: 170px;  
+}
+.main-nav-scrolled{
+  position: fixed;
+  top: 94px;
+  width: 100%;
+  max-width: 1100px;
+  display: block;
 }
 nav{
   max-width: 760px;
   margin: 0 auto;
   margin-top: 25px;
+  background: $default;
+  z-index: 200;
    ul.menu {
     max-width: 100%;
     margin: 0;
     padding: 0;
+
     li{
       display: inline;
       float: left;
@@ -83,29 +104,89 @@ nav{
         max-width: 100%;
         border: 1px solid $border;
         border-left: none;
-        background: $default;
         display: block;
-        padding: 15px 0;
-        &:hover{
-          color: lighten( $default, 80% );
-          background: $black;
-        }
+        padding: 12px 0;
+        transition: $animatorOne;
       }
     }
     li:first-child{
       border-left: 1px solid $border;
     }
+    .menu-item-48 a:hover{
+        color: white;
+        background: red;
+      }
+      .menu-item-44 a:hover{
+        color: white;
+        background: green;
+      }
+      .menu-item-42 a:hover{
+        color: white;
+        background: blue;
+      }
+      .menu-item-46 a:hover{
+        color: white;
+        background: purple;
+      }
    }
 }
 ///ABOUT//////////////////////////
 .about{
   margin-top: 100px;
+  .about_block{
+    margin-bottom: 15px;
+  }
+  .spacer{
+    margin-bottom: 50px;
+  }
+  .scroll_spacer{
+    margin-bottom: 150px;
+  }
 }
 .work{
   margin-top: 100px;
+  .workItem{
+    border-top: 1px solid $border;
+    transition: $animatorOne;
+    .titleFloat{
+      float: left;
+      h3{
+        font-size: 2.4rem;
+        font-weight: 300;
+        display: inline-block;
+        margin: 0;
+        padding: 12px 0;
+        padding-left: 25px;
+      }
+    }
+    .iconFloat{
+      float: right;
+      .icons{
+        font-size: 1.8rem;
+        float: left;
+        padding: 15px 15px 0 15px;
+      }
+    }
+  }
+}
+.work_img{
+  max-width: 1100px;
+  height: 375px;
+  background: rgba(0,0,0,0.45);
+  display: none;
 }
 .thoughts{
   margin-top: 100px;
+  .blog_post{
+    float: left;
+    width: 490px;
+    height: 190px;
+    border: 1px solid $border;
+    margin-bottom: 20px;
+  }
+  .blog_post:nth-child(2n+3){
+    margin-left: 20px;
+  }
 }
 .contact{
   margin-top: 100px;

@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 <header>
-  <div class="wrapper">
+  <div class="wrapper clearfix">
     <div class="container masthead">
       <h1>
         <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
@@ -29,15 +29,15 @@
         </a>
       </h1>
     </div>
+
     <div class="jumbotron">
       <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt="">
     </div>
-    <nav>
-      <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navication -->
+    <nav class="top_nav clearfix">
+      <div class="main_nav">
+        <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navigation -->
+      </div>
     </nav>
-    
-
-
   </div> <!-- /.container -->
 </header><!--/.header-->
 

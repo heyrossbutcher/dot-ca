@@ -178,6 +178,92 @@ img.alignright {
   float: left;
   clear: both; }
 
+.skills {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 8px 30px;
+  display: inline-block; }
+
+.ActionScript {
+  background: #579F43; }
+
+.API {
+  background: #00CED1; }
+
+.CSS {
+  background: #778899; }
+
+.Git {
+  background: #DAA520; }
+
+.HTML5 {
+  background: #DEB887; }
+
+.JavaScript {
+  background: #005487; }
+
+.jQuery {
+  background: #D2691E; }
+
+.Responsive {
+  background: #9E0050; }
+
+.Sass {
+  background: #A11E0B; }
+
+.WordPress {
+  background: #9B59B6; }
+
+.Effects {
+  background: #312A68; }
+
+.Blender {
+  background: #005487; }
+
+.Browser {
+  background: #ED1E79; }
+
+.Command {
+  background: #579F43; }
+
+.Grid {
+  background: rgba(0, 0, 0, 0.8); }
+
+.Gulp {
+  background: #EE4846; }
+
+.Illustrator {
+  background: #FF7A00; }
+
+.Maxon {
+  background: #808080; }
+
+.Photoshop {
+  background: #00B0F9; }
+
+.Premiere {
+  background: #58266A; }
+
+.Sketch {
+  background: #FFC61E; }
+
+.Sublime {
+  background: #515151; }
+
+.tasks {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 8px 30px;
+  display: inline-block; }
+
+.hide {
+  display: none; }
+
+.makeWhite {
+  color: #fff; }
+
 /* =============================================================================
                    Default Styling
    ========================================================================== */
@@ -432,7 +518,9 @@ p.form-allowed-tags, .nocomments {
   max-width: 1100px;
   margin: 0 auto;
   font-size: 1.4rem;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: relative; }
 
 .innerWrapper {
   max-width: 760px;
@@ -446,7 +534,7 @@ h1 {
   font-size: 3rem;
   font-family: 'Merriweather', serif;
   margin: 0;
-  padding: 15px 45px 15px 30px;
+  padding: 12px 45px 12px 30px;
   background: rgba(0, 0, 0, 0.8);
   display: inline;
   position: absolute;
@@ -472,19 +560,33 @@ h2 {
   display: inline-block; }
 
 header .masthead {
-  height: 130px;
-  position: relative; }
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 1100px;
+  height: 120px;
+  background: #ffffff; }
 
 .jumbotron {
   width: 1100px;
   min-width: 1100px;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin-top: 130px; }
+
+.main-nav-scrolled {
+  position: fixed;
+  top: 94px;
+  width: 100%;
+  max-width: 1100px;
+  display: block; }
 
 nav {
   max-width: 760px;
   margin: 0 auto;
-  margin-top: 25px; }
+  margin-top: 25px;
+  background: #ffffff;
+  z-index: 200; }
   nav ul.menu {
     max-width: 100%;
     margin: 0;
@@ -502,23 +604,72 @@ nav {
         max-width: 100%;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-left: none;
-        background: #ffffff;
         display: block;
-        padding: 15px 0; }
-        nav ul.menu li a:hover {
-          color: white;
-          background: rgba(0, 0, 0, 0.8); }
+        padding: 12px 0;
+        -webkit-transition: all 0.25s ease-in;
+                transition: all 0.25s ease-in; }
     nav ul.menu li:first-child {
       border-left: 1px solid rgba(0, 0, 0, 0.25); }
+    nav ul.menu .menu-item-48 a:hover {
+      color: white;
+      background: red; }
+    nav ul.menu .menu-item-44 a:hover {
+      color: white;
+      background: green; }
+    nav ul.menu .menu-item-42 a:hover {
+      color: white;
+      background: blue; }
+    nav ul.menu .menu-item-46 a:hover {
+      color: white;
+      background: purple; }
 
 .about {
   margin-top: 100px; }
+  .about .about_block {
+    margin-bottom: 15px; }
+  .about .spacer {
+    margin-bottom: 50px; }
+  .about .scroll_spacer {
+    margin-bottom: 150px; }
 
 .work {
   margin-top: 100px; }
+  .work .workItem {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    -webkit-transition: all 0.25s ease-in;
+            transition: all 0.25s ease-in; }
+    .work .workItem .titleFloat {
+      float: left; }
+      .work .workItem .titleFloat h3 {
+        font-size: 2.4rem;
+        font-weight: 300;
+        display: inline-block;
+        margin: 0;
+        padding: 12px 0;
+        padding-left: 25px; }
+    .work .workItem .iconFloat {
+      float: right; }
+      .work .workItem .iconFloat .icons {
+        font-size: 1.8rem;
+        float: left;
+        padding: 15px 15px 0 15px; }
+
+.work_img {
+  max-width: 1100px;
+  height: 375px;
+  background: rgba(0, 0, 0, 0.45);
+  display: none; }
 
 .thoughts {
   margin-top: 100px; }
+  .thoughts .blog_post {
+    float: left;
+    width: 490px;
+    height: 190px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px; }
+  .thoughts .blog_post:nth-child(2n+3) {
+    margin-left: 20px; }
 
 .contact {
   margin-top: 100px; }
