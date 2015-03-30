@@ -15,7 +15,7 @@ get_header(); ?>
       <?php $subitems = $items[0]; ?> 
       <?php //pre_r($postid); ?> 
       
-      <section class="about">
+      <section class="about" id="about">
         <div class="wrapper">
           <div class="innerWrapper">
             <div class="title"><h2>About</h2></div>
@@ -61,7 +61,7 @@ get_header(); ?>
           </div><!-- ///////////End out of WRAPPER  /////////// -->
       </section><!-- ///////////End out of ABOUT/////////// -->
       
-      <section class="work">
+      <section class="work" id="work">
         <div class="wrapper">
           <div class="innerWrapper">
             <div class="title"><h2>Work</h2></div>
@@ -120,7 +120,7 @@ get_header(); ?>
 
       </section><!-- ///////////End out of WORK/////////// -->
 
-      <section class="thoughts">
+      <section class="thoughts" id="thoughts">
         <div class="wrapper">
           <div class="blogWrapper clearfix">
             <div class="title"><h2>Blog</h2></div>
@@ -147,7 +147,7 @@ get_header(); ?>
         </div><!-- ///////////End out of WRAPPER  /////////// -->
       </section><!-- ///////////End out of BLOG/////////// -->
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="wrapper">
           <div class="contactWrapper">
             <div class="title"><h2>Contact</h2></div>

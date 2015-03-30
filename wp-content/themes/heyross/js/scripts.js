@@ -60,12 +60,16 @@ $(window).scroll(function() {
 });
 //END STICKY NAV
 //
+app.smoothScroller = function(){
+	$("nav a").smoothScroll({ offset: -150 });
+}
 //////////////////
 //INIT FUNCTION
 //////////////////
 app.init = function(){
 	app.work_piece();
 	app.blog_piece();
+	app.smoothScroller();
 }
 //
 //////////////////
