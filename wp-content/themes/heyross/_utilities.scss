@@ -1,9 +1,15 @@
 // _utilities.scss
 $animatorOne: all 0.25s ease-in;
+$animatorTwo: all 0.125s ease-in;
+$borderOne: 1px solid $border;
+$borderTwo: 4px solid $borderFull;
 
 .hide{
 	display: none;
 }
 .makeWhite{
 	color: #fff;
+}
+.blog_scaled{
+	border: $borderTwo!important;
 }

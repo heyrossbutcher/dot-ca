@@ -264,6 +264,9 @@ img.alignright {
 .makeWhite {
   color: #fff; }
 
+.blog_scaled {
+  border: 4px solid black !important; }
+
 /* =============================================================================
                    Default Styling
    ========================================================================== */
@@ -522,29 +525,59 @@ p.form-allowed-tags, .nocomments {
   font-weight: 300;
   position: relative; }
 
-.innerWrapper {
-  max-width: 760px;
-  margin: 0 auto; }
-
 .blogWrapper {
   max-width: 1000px;
   margin: 0 auto; }
 
-h1 {
-  font-size: 3rem;
-  font-family: 'Merriweather', serif;
-  margin: 0;
-  padding: 12px 45px 12px 30px;
-  background: rgba(0, 0, 0, 0.8);
-  display: inline;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
-  h1 a {
-    color: #ffffff;
-    text-decoration: none; }
+.innerWrapper {
+  max-width: 760px;
+  margin: 0 auto; }
+
+.contactWrapper {
+  max-width: 620px;
+  margin: 0 auto; }
+
+.logo {
+  float: left;
+  width: 50%;
+  margin-top: 35px; }
+  .logo h1 {
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 12px 45px 12px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline; }
+    .logo h1 a {
+      color: #ffffff;
+      text-decoration: none; }
+
+.social {
+  float: right;
+  max-width: 50%;
+  margin-top: 30px; }
+  .social .social_btns {
+    float: right;
+    text-align: right;
+    max-width: 150px;
+    padding-left: 15px;
+    font-size: 4rem; }
+  .social .connect {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-top: 15px; }
+  .social .LinkedIn a {
+    color: #9B59B6; }
+    .social .LinkedIn a:hover {
+      color: #778899; }
+  .social .Twitter a {
+    color: #00B0F9; }
+    .social .Twitter a:hover {
+      color: #778899; }
+  .social .GitHub a {
+    color: #DAA520; }
+    .social .GitHub a:hover {
+      color: #778899; }
 
 .title {
   width: 100%;
@@ -572,7 +605,7 @@ header .masthead {
   min-width: 1100px;
   margin: 0;
   padding: 0;
-  margin-top: 130px; }
+  margin-top: 155px; }
 
 .main-nav-scrolled {
   position: fixed;
@@ -612,16 +645,16 @@ nav {
       border-left: 1px solid rgba(0, 0, 0, 0.25); }
     nav ul.menu .menu-item-48 a:hover {
       color: white;
-      background: red; }
+      background: #A11E0B; }
     nav ul.menu .menu-item-44 a:hover {
       color: white;
-      background: green; }
+      background: #4682B4; }
     nav ul.menu .menu-item-42 a:hover {
       color: white;
-      background: blue; }
+      background: #DAA520; }
     nav ul.menu .menu-item-46 a:hover {
       color: white;
-      background: purple; }
+      background: #778899; }
 
 .about {
   margin-top: 100px; }
@@ -641,12 +674,12 @@ nav {
     .work .workItem .titleFloat {
       float: left; }
       .work .workItem .titleFloat h3 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         font-weight: 300;
         display: inline-block;
         margin: 0;
-        padding: 12px 0;
-        padding-left: 25px; }
+        padding: 15px 0;
+        padding-left: 20px; }
     .work .workItem .iconFloat {
       float: right; }
       .work .workItem .iconFloat .icons {
@@ -657,22 +690,167 @@ nav {
 .work_img {
   max-width: 1100px;
   height: 375px;
-  background: rgba(0, 0, 0, 0.45);
-  display: none; }
+  background: #ffffff;
+  margin-bottom: 15px;
+  display: none;
+  background-position: 50% 50%; }
+  .work_img .work_copy {
+    float: left;
+    width: 50%; }
+    .work_img .work_copy h4 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.8rem;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      padding: 8px 35px;
+      margin: 0;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      display: inline-block; }
+    .work_img .work_copy .work_excerpt p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+      letter-spacing: 0.1px;
+      padding-left: 35px; }
+    .work_img .work_copy .work_link a {
+      color: #ffffff;
+      letter-spacing: 0.25px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 8px 15px;
+      margin-top: 30px;
+      margin-left: 35px;
+      text-decoration: none;
+      display: inline-block;
+      -webkit-transition: all 0.25s ease-in;
+              transition: all 0.25s ease-in; }
+      .work_img .work_copy .work_link a:hover {
+        color: rgba(0, 0, 0, 0.8);
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.25); }
+  .work_img .work_close {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    background: #ffffff;
+    float: right;
+    padding: 5px 7px 2px 7px;
+    margin: 7px;
+    display: inline;
+    -webkit-transition: all 0.125s ease-in;
+            transition: all 0.125s ease-in; }
+    .work_img .work_close:hover {
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.8); }
 
 .thoughts {
   margin-top: 100px; }
   .thoughts .blog_post {
     float: left;
-    width: 490px;
+    width: 49%;
+    max-width: 490px;
     height: 190px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    background-position: 50% 50%;
+    background-size: 220%;
+    -webkit-transition: all 0.125s ease-in;
+            transition: all 0.125s ease-in; }
+    .thoughts .blog_post h3 {
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      font-weight: 300;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      margin: 0;
+      margin-top: 25px;
+      padding: 8px 20px;
+      display: inline-block; }
+    .thoughts .blog_post .blog_link a {
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 4px 15px;
+      margin-top: 85px;
+      margin-left: 15px;
+      text-decoration: none;
+      display: inline-block;
+      -webkit-transition: all 0.25s ease-in;
+              transition: all 0.25s ease-in; }
+      .thoughts .blog_post .blog_link a:hover {
+        color: rgba(0, 0, 0, 0.8);
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.25); }
   .thoughts .blog_post:nth-child(2n+3) {
-    margin-left: 20px; }
+    margin-left: 2%; }
+  .thoughts .blogs_link a {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 8px 25px;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition: all 0.25s ease-in;
+            transition: all 0.25s ease-in; }
+    .thoughts .blogs_link a:hover {
+      color: rgba(0, 0, 0, 0.8);
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.25); }
 
 .contact {
   margin-top: 100px; }
+  .contact .intro {
+    margin-bottom: 20px; }
+  .contact .wpcf7-form {
+    width: 100%; }
+    .contact .wpcf7-form input {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5rem;
+      color: #515151;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 5px; }
+    .contact .wpcf7-form .your_name, .contact .wpcf7-form .your_email, .contact .wpcf7-form .your_subject {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      color: #778899;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px; }
+    .contact .wpcf7-form .your-message {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      color: #778899;
+      width: 100%;
+      height: 120px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 5px;
+      margin-bottom: 20px; }
+    .contact .wpcf7-form .form_send {
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 4px 25px;
+      font-weight: 300;
+      -webkit-transition: all 0.25s ease-in;
+              transition: all 0.25s ease-in; }
+      .contact .wpcf7-form .form_send:hover {
+        background: #ffffff;
+        color: rgba(0, 0, 0, 0.8); }
+  .contact .wpcf7-mail-sent-ok, .contact .wpcf7-validation-errors {
+    color: #ffffff;
+    border: none;
+    background: #808080;
+    margin: 0;
+    margin-top: 25px;
+    padding: 10px 15px;
+    display: inline-block; }
 
 .thanks {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
+  .thanks h2 {
+    margin-bottom: 35px; }
+  .thanks h3 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center; }

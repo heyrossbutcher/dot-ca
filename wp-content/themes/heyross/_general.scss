@@ -13,29 +13,68 @@ section{
   font-weight: 300;
   position: relative;
 }
-.innerWrapper{
-  max-width: 760px;
-  margin: 0 auto;
-}
 .blogWrapper{
   max-width: 1000px;
   margin: 0 auto;
 }
-
-h1{
-  font-size: 3rem;
-  font-family: $display-font;
-  margin: 0;
-  padding: 12px 45px 12px 30px;
-  background: $black;
-  display: inline;
-  //
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  a{
-    color: $default;
-    text-decoration: none;
+.innerWrapper{
+  max-width: 760px;
+  margin: 0 auto;
+}
+.contactWrapper{
+  max-width: 620px;
+  margin: 0 auto;
+}
+.logo{
+  float: left;
+  width: 50%;
+  margin-top: 35px; 
+  h1{
+    font-size: 3rem;
+    font-family: $display-font;
+    margin: 0;
+    padding: 12px 45px 12px 30px;
+    background: $black;
+    display: inline;
+    a{
+      color: $default;
+      text-decoration: none;
+    }
+  }
+}
+.social{
+  float: right;
+  max-width: 50%;
+  margin-top: 30px;
+  .social_btns{
+    float: right;
+    text-align: right;
+    max-width: 150px;
+    padding-left: 15px;
+    font-size: 4rem;
+  }
+  .connect{
+    font-size:1.6rem;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .LinkedIn a{
+    color: $purple;
+    &:hover{
+      color: $richgray;
+    }
+  }
+  .Twitter a{
+    color: $lightblue;
+    &:hover{
+      color: $richgray;
+    }
+  }
+  .GitHub a{
+    color: $burntorange;
+    &:hover{
+      color: $richgray;
+    }
   }
 }
 .title{
@@ -68,7 +107,7 @@ header{
   min-width: 1100px;
   margin: 0;
   padding: 0;
-  margin-top: 130px;
+  margin-top: 155px;
 }
 .top_nav{
   // left: 170px;  
@@ -102,7 +141,7 @@ nav{
         text-transform: uppercase;
         text-decoration: none;
         max-width: 100%;
-        border: 1px solid $border;
+        border: $borderOne;
         border-left: none;
         display: block;
         padding: 12px 0;
@@ -114,19 +153,19 @@ nav{
     }
     .menu-item-48 a:hover{
         color: white;
-        background: red;
+        background: $maroon;
       }
       .menu-item-44 a:hover{
         color: white;
-        background: green;
+        background: $grayblue;
       }
       .menu-item-42 a:hover{
         color: white;
-        background: blue;
+        background: $burntorange;
       }
       .menu-item-46 a:hover{
         color: white;
-        background: purple;
+        background: $richgray;
       }
    }
 }
@@ -146,17 +185,17 @@ nav{
 .work{
   margin-top: 100px;
   .workItem{
-    border-top: 1px solid $border;
+    border-top: $borderOne;
     transition: $animatorOne;
     .titleFloat{
       float: left;
       h3{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         font-weight: 300;
         display: inline-block;
         margin: 0;
-        padding: 12px 0;
-        padding-left: 25px;
+        padding: 15px 0;
+        padding-left: 20px;
       }
     }
     .iconFloat{
@@ -172,26 +211,190 @@ nav{
 .work_img{
   max-width: 1100px;
   height: 375px;
-  background: rgba(0,0,0,0.45);
+  background: $default;
+  margin-bottom: 15px;
+  // border: $borderOne;
   display: none;
+  background-position: 50% 50%;
+  .work_copy{
+    float: left;
+    width: 50%;
+    h4{
+      font-family: $display-font;
+      font-size: 2.8rem;
+      background: $black;
+      color: $default;
+      padding: 8px 35px;
+      margin: 0;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .work_excerpt{
+      p{
+        font-size: 1.8rem;
+        line-height: 1.6;
+        letter-spacing: 0.1px;
+        padding-left: 35px;
+      }
+    }
+    .work_link a{
+      color: $default;
+      letter-spacing: 0.25px;
+      background: $black;
+      border: $borderOne;
+      padding: 8px 15px;
+      margin-top: 30px;
+      margin-left: 35px;
+      text-decoration: none;
+      display: inline-block;
+      transition: $animatorOne;
+      &:hover{
+        color: $black;
+        background: $default;
+        border: $borderOne;
+      }
+    }
+  }
+  .work_close{
+    font-family: $display-font;
+    font-size: 1.5rem;
+    background: $default;
+    float: right;
+    padding: 5px 7px 2px 7px;
+    margin: 7px;
+    display: inline;
+    transition: $animatorTwo;
+    &:hover{
+      color: $default;
+      background: $black;
+    }
+  }
 }
 .thoughts{
   margin-top: 100px;
   .blog_post{
     float: left;
-    width: 490px;
+    width: 49%;
+    max-width: 490px;
     height: 190px;
-    border: 1px solid $border;
+    // border: $borderOne;
     margin-bottom: 20px;
+    background-position: 50% 50%;
+    background-size: 220%;
+    transition: $animatorTwo;
+    h3{
+      font-family: $body-font;
+      font-size: 2rem;
+      font-weight: 300;
+      background: $black;
+      color: $default;
+      margin: 0;
+      margin-top: 25px;
+      padding: 8px 20px;
+      display: inline-block;
+    }
+    .blog_link a{
+      color: $default;
+      background: $black;
+      border: $borderOne;
+      padding: 4px 15px;
+      margin-top: 85px;
+      margin-left: 15px;
+      text-decoration: none;
+      display: inline-block;
+      transition: $animatorOne;
+      &:hover{
+        color: $black;
+        background: $default;
+        border: $borderOne;
+      }
+    }
   }
   .blog_post:nth-child(2n+3){
-    margin-left: 20px;
+    margin-left: 2%;
+  }
+  .blogs_link a{
+    color: $default;
+    background: $black;
+    border: $borderOne;
+    padding: 8px 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: $animatorOne;
+    &:hover{
+      color: $black;
+      background: $default;
+      border: $borderOne;
+    }
   }
 }
 .contact{
   margin-top: 100px;
+  .intro{
+    margin-bottom: 20px;
+  }
+  .wpcf7-form{
+    width: 100%;
+    input{
+      font-family: $body-font;
+      font-size: 1.5rem;
+      color: $darkgray;
+      border: $borderOne; 
+      padding: 5px;
+    }
+    .your_name, .your_email, .your_subject{
+      font-family: $body-font;
+      font-weight: 300;
+      color: $richgray;
+      width: 100%;
+      margin-bottom: 10px;
+      padding:5px;
+    }
+    .your-message{
+      font-family: $body-font;
+      font-weight: 300;
+      color: $richgray;
+      width: 100%;
+      height: 120px;
+      border: $borderOne; 
+      padding:5px;
+      margin-bottom: 20px;
+    }
+    .form_send{
+      color: $default;
+      background: $black;
+      border: $borderOne;
+      padding: 4px 25px;
+      font-weight: 300;
+      transition: $animatorOne;
+      &:hover{
+      background: $default;
+      color: $black;
+    }
+    }
+  }
+  .wpcf7-mail-sent-ok, .wpcf7-validation-errors{
+    color: $default;
+    border: none;
+    background: $lightgray;
+    margin: 0;
+    margin-top: 25px;
+    padding: 10px 15px;
+    display: inline-block;
+  }
 }
 .thanks{
   margin-top: 100px;
+  margin-bottom: 100px;
+  h2{
+    margin-bottom: 35px;
+  }
+  h3{
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
-
