@@ -14,6 +14,7 @@ function theme_setup() {
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('portfolio', 1500, 840, false);
+	add_image_size('blog', 760, 240, false);
 
 	function pw_show_image_sizes($sizes) {
     $sizes['square'] = 'Square Image';
@@ -190,11 +191,11 @@ function hackeryou_remove_recent_comments_style() {
 add_action( 'widgets_init', 'hackeryou_remove_recent_comments_style' );
 
 
-if ( ! function_exists( 'hackeryou_posted_on' ) ) :
+if ( ! function_exists( 'heyross_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  */
-function hackeryou_posted_on() {
+function heyross_posted_on() {
 	printf('<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s',
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
@@ -211,11 +212,11 @@ function hackeryou_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'hackeryou_posted_in' ) ) :
+if ( ! function_exists( 'heyross_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
  */
-function hackeryou_posted_in() {
+function heyross_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {

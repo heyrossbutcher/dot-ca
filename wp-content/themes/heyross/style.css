@@ -329,6 +329,47 @@ nav {
     border-bottom: none;
     margin-bottom: 10px; }
 
+.setImage {
+  margin-bottom: 15px; }
+
+#respond label {
+  font-size: 2rem; }
+
+#comment {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #778899;
+  padding: 5px; }
+
+#submit {
+  font-weight: 300;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.25px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 8px 15px;
+  margin-top: 30px;
+  margin-left: 35px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all 0.25s ease-in;
+          transition: all 0.25s ease-in; }
+  #submit:hover {
+    color: rgba(0, 0, 0, 0.8);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.25); }
+
+.logged-in-as a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-weight: 400; }
+  .logged-in-as a:hover {
+    text-decoration: underline;
+    color: rgba(77, 77, 77, 0.8); }
+
 .comments-area {
   margin-top: 50px; }
   .comments-area h2 {
@@ -348,6 +389,13 @@ nav {
   .comment-author .avatar {
     margin-right: 10px;
     border: 1px solid rgba(0, 0, 0, 0.25); }
+
+.comment-form input {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #778899;
+  padding: 5px; }
 
 .comment-body {
   margin-top: 20px;
@@ -613,8 +661,8 @@ h3#reply-title {
   font-weight: 700; }
 
 #respond label {
-  color: #888888;
-  font-size: 12px; }
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.5rem; }
 
 #respond input {
   width: 98%;
@@ -624,9 +672,10 @@ h3#reply-title {
   width: 98%; }
 
 #respond dt, #respond dd {
-  color: #888888;
-  font-size: 12px;
-  line-height: 18px; }
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #778899; }
 
 #respond dd code {
   font-size: 11px; }
@@ -859,7 +908,7 @@ header .masthead {
       background: rgba(0, 0, 0, 0.8);
       color: #ffffff;
       margin: 0;
-      margin-top: 25px;
+      margin-top: 15px;
       padding: 10px 20px;
       display: inline-block; }
     .thoughts .blog_post .blog_link a {

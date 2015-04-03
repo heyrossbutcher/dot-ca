@@ -14,7 +14,49 @@
 	}
 }
 //
+.setImage{
+	margin-bottom: 15px;
+}
+#respond label{
+	font-size: 2rem;
+}
+#comment{
+	border: $borderThree;
+	margin-bottom: 15px;
+	font-family: $body-font;
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: $richgray;
+	padding: 5px;
 
+}
+#submit{
+	font-weight: 300;
+	color: $default;
+	background: $black;
+	letter-spacing: 0.25px;
+	border: $borderOne;
+	padding: 8px 15px;
+	margin-top: 30px;
+	margin-left: 35px;
+	text-decoration: none;
+	display: inline-block;
+	transition: $animatorOne;
+	&:hover{
+	  color: $black;
+	  background: $default;
+	  border: $borderOne;
+	}
+}
+.logged-in-as a{
+	color: $black;
+	text-decoration: none;
+	font-weight: 400;
+	&:hover{
+		text-decoration: underline;
+		color: lighten($black, 30%);
+	}
+}
 .comments-area{
 	margin-top: 50px;
 	h2{
@@ -40,6 +82,13 @@
 }
 .comment-reply-link{
 
+}
+.comment-form input{
+	font-family: $body-font;
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: $richgray;
+	padding: 5px;
 }
 .comment-body{
 	margin-top: 20px;

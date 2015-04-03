@@ -128,8 +128,8 @@ get_header(); ?>
               )) ?> 
               <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/blogs.jpg)" data-num='<?php the_ID(); ?>'>
-                      <div class="blog_copy hide">
-                        <h3 class="entry-title"><?php the_title(); ?></h3>
+                      <h3 class="entry-title"><?php the_title(); ?></h3>
+                      <div class="blog_copy">
                         <div class="blog_link">
                           <a href="<?php the_permalink(); ?>">Click to read</a>
                         </div>

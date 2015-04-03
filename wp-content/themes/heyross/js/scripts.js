@@ -42,12 +42,12 @@ app.blog_piece = function(){
 		$(this).addClass('blog_border');
 		app.bpNum = $(this).data('num');
 		app.bpShow = '.bp_' + app.bpNum + ' .blog_copy';
-		$(app.bpShow).toggle( 'slide' );
+		// $(app.bpShow).toggle( 'slide' );
 	});
 	$('.blog_post').on('mouseleave', function(){
 		$(this).css('background-size','220%');
 		$(this).removeClass('blog_border');
-		$(app.bpShow).toggle( 'slide' );
+		// $(app.bpShow).toggle( 'slide' );
 	});
 }
 //

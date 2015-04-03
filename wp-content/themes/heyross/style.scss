@@ -292,8 +292,8 @@ h3#reply-title { margin:18px 0; }
   font-weight:700;
 }
 #respond label {
-  color:#888888;
-  font-size:12px;
+  color:$black;
+  font-size:1.5rem;
 }
 #respond input {
   width:98%;
@@ -301,9 +301,10 @@ h3#reply-title { margin:18px 0; }
 }
 #respond textarea { width:98%; }
 #respond dt, #respond dd {
-  color:#888888;
-  font-size:12px;
-  line-height:18px;
+  font-family: $body-font;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: $richgray;
 }
 #respond dd code { font-size:11px; }
 #respond .form-submit { margin:0 0 24px; }
