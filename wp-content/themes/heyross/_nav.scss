@@ -1,0 +1,61 @@
+// _nav.scss
+.top_nav{
+  // left: 170px;  
+}
+.main-nav-scrolled{
+  position: fixed;
+  top: 94px;
+  width: 100%;
+  max-width: 1100px;
+  display: block;
+}
+nav{
+  max-width: 760px;
+  margin: 0 auto;
+  margin-top: 25px;
+  background: $default;
+  z-index: 200;
+   ul.menu {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    li{
+      display: inline;
+      float: left;
+      margin: 0;
+      text-align: center;
+      width: 25%;
+      a{
+        color: $black;
+        text-transform: uppercase;
+        text-decoration: none;
+        max-width: 100%;
+        border: $borderOne;
+        border-left: none;
+        display: block;
+        padding: 12px 0;
+        transition: $animatorOne;
+      }
+    }
+    li:first-child{
+      border-left: 1px solid $border;
+    }
+    .menu-item-66 a:hover{
+        color: white;
+        background: $grayblue;
+      }
+      .menu-item-67 a:hover{
+        color: white;
+        background: $maroon;
+      }
+      .menu-item-68 a:hover{
+        color: white;
+        background: $burntorange;
+      }
+      .menu-item-69 a:hover{
+        color: white;
+        background: $richgray;
+      }
+   }
+}

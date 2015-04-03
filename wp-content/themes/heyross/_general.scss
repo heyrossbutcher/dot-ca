@@ -45,16 +45,16 @@ section{
 .social{
   float: right;
   max-width: 50%;
-  margin-top: 30px;
+  margin-top: 38px;
   .social_btns{
     float: right;
     text-align: right;
     max-width: 150px;
     padding-left: 15px;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .connect{
-    font-size:1.6rem;
+    font-size:1.4rem;
     text-transform: uppercase;
     margin-top: 15px;
   }
@@ -103,72 +103,15 @@ header{
   }
 }
 .jumbotron{
-  width: 1100px;
-  min-width: 1100px;
+  // width: 1100px;
+  max-width: 1100px;
+  height: 300px;
+  background: #000;
   margin: 0;
   padding: 0;
   margin-top: 155px;
 }
-.top_nav{
-  // left: 170px;  
-}
-.main-nav-scrolled{
-  position: fixed;
-  top: 94px;
-  width: 100%;
-  max-width: 1100px;
-  display: block;
-}
-nav{
-  max-width: 760px;
-  margin: 0 auto;
-  margin-top: 25px;
-  background: $default;
-  z-index: 200;
-   ul.menu {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
 
-    li{
-      display: inline;
-      float: left;
-      margin: 0;
-      text-align: center;
-      width: 25%;
-      a{
-        color: $black;
-        text-transform: uppercase;
-        text-decoration: none;
-        max-width: 100%;
-        border: $borderOne;
-        border-left: none;
-        display: block;
-        padding: 12px 0;
-        transition: $animatorOne;
-      }
-    }
-    li:first-child{
-      border-left: 1px solid $border;
-    }
-    .menu-item-48 a:hover{
-        color: white;
-        background: $maroon;
-      }
-      .menu-item-44 a:hover{
-        color: white;
-        background: $grayblue;
-      }
-      .menu-item-42 a:hover{
-        color: white;
-        background: $burntorange;
-      }
-      .menu-item-46 a:hover{
-        color: white;
-        background: $richgray;
-      }
-   }
-}
 ///ABOUT//////////////////////////
 .about{
   margin-top: 100px;
@@ -227,21 +170,23 @@ nav{
       padding: 8px 35px;
       margin: 0;
       margin-top: 40px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
       display: inline-block;
     }
     .work_excerpt{
+      background: $default;
       p{
-        font-size: 1.8rem;
-        line-height: 1.6;
+        font-size: 1.5rem;
+        line-height: 1.4;
         letter-spacing: 0.1px;
+        padding: 20px;  
         padding-left: 35px;
       }
     }
     .work_link a{
       color: $default;
-      letter-spacing: 0.25px;
       background: $black;
+      letter-spacing: 0.25px;
       border: $borderOne;
       padding: 8px 15px;
       margin-top: 30px;
@@ -291,16 +236,16 @@ nav{
       color: $default;
       margin: 0;
       margin-top: 25px;
-      padding: 8px 20px;
+      padding: 10px 20px;
       display: inline-block;
     }
     .blog_link a{
       color: $default;
       background: $black;
       border: $borderOne;
-      padding: 4px 15px;
-      margin-top: 85px;
-      margin-left: 15px;
+      padding: 4px 10px 6px 10px;
+      margin-top: 25px;
+      margin-left: 20px;
       text-decoration: none;
       display: inline-block;
       transition: $animatorOne;

@@ -39,7 +39,7 @@
         <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
 
           <div class="social_btns <?php the_field('which_social');  //Assign the class ?>">
-            <a href="<?php the_field('link_to');  //put the link ?>" target="blank">
+            <a href="<?php the_field('link_to');  //put the link ?>" target="blank" title="<?php the_field('which_social');  //Assign the class ?>" alt="<?php the_field('which_social');  //Assign the class ?>">
               <?php the_field('font_awesome_link');  //Get the icon ?>
             </a>
           </div>
@@ -49,14 +49,23 @@
       </div>
     </div>
 
-    <div class="jumbotron">
-      <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt="">
-    </div>
-    <nav class="top_nav clearfix">
-      <div class="main_nav">
-        <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navigation -->
+    <?php if(!is_single()) : ?>
+      <div class="jumbotron">
+        <!-- <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt=""> -->
       </div>
-    </nav>
+      <nav class="top_nav clearfix">
+        <div class="main_nav">
+          <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navigation -->
+        </div>
+      </nav>
+    <?php else :?>
+      <nav class="post_nav clearfix main-nav-scrolled">
+        <div class="main_nav">
+          <?php wp_nav_menu( 'inner_nav' ); ?><!-- Load in navigation -->
+        </div>
+      </nav>
+    <?php endif ?>
+
   </div> <!-- /.container -->
 </header><!--/.header-->
 

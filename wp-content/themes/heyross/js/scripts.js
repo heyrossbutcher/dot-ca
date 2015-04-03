@@ -31,19 +31,24 @@ app.work_piece = function(){
 		app.closeIt = '.wp_' + app.closeNum;
 		app.hideCopy = app.closeIt + ' .work_copy';
 		$(app.closeIt).slideToggle(300);
-		$(app.hideCopy).toggle( 'slide' );
+		$(app.hideCopy).toggle( 'slide');
 	});
 }
 //BLOG FUNCTIONALITY
 //ROLLOVERS & OPEN
 app.blog_piece = function(){
-	$('.blog_post').on('mouseover', function(){
-		$(this).css('background-size','210%');
+	$('.blog_post').on('mouseenter', function(){
+		$(this).css('background-size','230%');
+		$(this).addClass('blog_border');
+		app.bpNum = $(this).data('num');
+		app.bpShow = '.bp_' + app.bpNum + ' .blog_copy';
+		$(app.bpShow).toggle( 'slide' );
 	});
-	$('.blog_post').on('mouseout', function(){
+	$('.blog_post').on('mouseleave', function(){
 		$(this).css('background-size','220%');
+		$(this).removeClass('blog_border');
+		$(app.bpShow).toggle( 'slide' );
 	});
-
 }
 //
 //STICKY NAV FUNCTIONALITY
@@ -59,9 +64,9 @@ $(window).scroll(function() {
   }
 });
 //END STICKY NAV
-//
+
 app.smoothScroller = function(){
-	$("nav a").smoothScroll({ offset: -150 });
+	$("nav a").smoothScroll({ offset: -160 });
 }
 //////////////////
 //INIT FUNCTION
@@ -70,6 +75,7 @@ app.init = function(){
 	app.work_piece();
 	app.blog_piece();
 	app.smoothScroller();
+	app.setNavWidth();
 }
 //
 //////////////////

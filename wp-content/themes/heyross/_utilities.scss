@@ -3,6 +3,7 @@ $animatorOne: all 0.25s ease-in;
 $animatorTwo: all 0.125s ease-in;
 $borderOne: 1px solid $border;
 $borderTwo: 4px solid $borderFull;
+$borderThree: 1px solid $borderCtwo;
 
 .hide{
 	display: none;
@@ -10,6 +11,6 @@ $borderTwo: 4px solid $borderFull;
 .makeWhite{
 	color: #fff;
 }
-.blog_scaled{
-	border: $borderTwo!important;
+.blog_border{
+	filter: grayscale(60%);
 }

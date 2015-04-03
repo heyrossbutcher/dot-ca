@@ -83,7 +83,6 @@ get_header(); ?>
                       </div>
                       <div class="iconFloat">
                         <?php $taxonomyTasks = get_the_terms($post->ID, 'materials');
-
                             foreach ($taxonomyTasks as $taxonomyTask) {
                               $task = $taxonomyTask->slug;
                               //pre_r($task); 
@@ -104,9 +103,9 @@ get_header(); ?>
                       <h4><?php the_field('project_name');  //Get the Project Name ?></h4>
                       <div class="work_excerpt">
                         <p><?php the_field('small_writeup');  //Get the Excerpt ?></p>
-                        <div class="work_link">
-                          <a href="<?php the_permalink(); ?> ">Click for more details</a>
-                        </div>
+                      </div>
+                      <div class="work_link">
+                        <a href="<?php the_permalink(); ?> ">Click for more details</a>
                       </div>
                     </div>
                     <div class="work_close">
@@ -116,8 +115,6 @@ get_header(); ?>
                 </div><!-- ///////////End out of WRAPPER  /////////// -->
               <?php endwhile; // end of the loop. ?>
             <?php //End of grabbing Portfolio pieces ?>
-        
-
       </section><!-- ///////////End out of WORK/////////// -->
 
       <section class="thoughts" id="thoughts">
@@ -130,13 +127,14 @@ get_header(); ?>
                 'posts_per_page' => 4
               )) ?> 
               <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-                <div class="blog_post" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/blogs.jpg)">
-                  <h3 class="entry-title"><?php the_title(); ?></h3>
-                  <div class="blog_link">
-                    <a href="<?php the_permalink(); ?> ">Read</a>
-                  </div>
+                <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/blogs.jpg)" data-num='<?php the_ID(); ?>'>
+                      <div class="blog_copy hide">
+                        <h3 class="entry-title"><?php the_title(); ?></h3>
+                        <div class="blog_link">
+                          <a href="<?php the_permalink(); ?>">Click to read</a>
+                        </div>
+                      </div>
                 </div>
-
               <?php endwhile; // end of the loop. ?>
             <?php //End of grabbing blog pieces ?>
             <div class="blogs_link">
@@ -183,7 +181,6 @@ get_header(); ?>
       </section><!-- ///////////End out of THANKS/////////// -->
 
     </div> <!-- /.content -->
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
