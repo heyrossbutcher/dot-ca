@@ -42,6 +42,9 @@ section{
     }
   }
 }
+// .call{
+//   float: right;
+// }
 .social{
   float: right;
   max-width: 50%;
@@ -89,6 +92,13 @@ h2{
   border-bottom: 1px solid $black;
   margin-bottom: 35px;
   display: inline-block;
+}
+.offset:before { 
+ display: block; 
+ content: " "; 
+ height: 150px;      // Give height of your fixed element 
+  margin-top: -150px; // Give negative margin of your fixed element    
+  visibility: hidden; 
 }
 ///HEADER//////////////////////////
 header{

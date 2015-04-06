@@ -3,7 +3,6 @@ var app ={};//Why hello namespace
 //WORK FUNCTIONALITY
 //ROLLOVERS & OPEN
 app.work_piece = function(){
-
 	$('.workItem').on('mouseover', function(){
 		app.bgCol = $(this).data('colour');
 		$(this).css('background',app.bgCol);
@@ -52,21 +51,30 @@ app.blog_piece = function(){
 }
 //
 //STICKY NAV FUNCTIONALITY
-app.mn = $(".top_nav");
-app.mns = "main-nav-scrolled";
+app.mn = $('.top_nav');
+app.mns = 'main-nav-scrolled';
+app.cn = $('.content');
+app.cnp = 'push';
 app.hdr = 360;
 //
 $(window).scroll(function() {
   if( $(this).scrollTop() > app.hdr ) {
     app.mn.addClass(app.mns);
+    app.cn.addClass(app.cnp);
   } else {
     app.mn.removeClass(app.mns);
-  }
+    app.cn.removeClass(app.cnp);
+
+  };
+  app.win = $(this).scrollTop();
+  app.about = $( ".thoughts" ).offset().top;
+  app.scrollNum = app.about - app.win;
+
+	console.log(app.offsetNum);		
 });
 //END STICKY NAV
-
 app.smoothScroller = function(){
-	$("nav a").smoothScroll({ offset: -160 });
+	$("nav a").smoothScroll({ offset: -25 });
 }
 //////////////////
 //INIT FUNCTION
@@ -75,12 +83,12 @@ app.init = function(){
 	app.work_piece();
 	app.blog_piece();
 	app.smoothScroller();
-	app.setNavWidth();
-}
-//
+	//app.setNavWidth();
+};
 //////////////////
 //DOCUMENT READY
 //////////////////
 $(function() {
 	app.init();
+	FastClick.attach(document.body);
 });

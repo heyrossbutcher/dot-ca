@@ -32,20 +32,26 @@
         </h1>
       </div>
       <div class="social">
+
+
+
         <?php $latestPosts = new wp_query(array(
           'post_type' => 'social',//Get the Social posts
           'posts_per_page' => -1
         )) ?>
         <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
-
-          <div class="social_btns <?php the_field('which_social');  //Assign the class ?>">
-            <a href="<?php the_field('link_to');  //put the link ?>" target="blank" title="<?php the_field('which_social');  //Assign the class ?>" alt="<?php the_field('which_social');  //Assign the class ?>">
-              <?php the_field('font_awesome_link');  //Get the icon ?>
-            </a>
-          </div>
+          
+            <div class="social_btns <?php the_field('which_social');  //Assign the class ?>">
+              <a href="<?php the_field('link_to');  //put the link ?>" target="blank" title="<?php the_field('which_social');  //Assign the class ?>" alt="<?php the_field('which_social');  //Assign the class ?>">
+                <?php the_field('font_awesome_link');  //Get the icon ?>
+              </a>
+            </div>
           
         <?php endwhile; ?><!-- //end custom loop -->
         <div class="social_btns connect">Connect</div>
+        <!-- <div class="call">CALL 647.668.6850</div> -->
+
+
       </div>
     </div>
 
@@ -67,6 +73,7 @@
     <?php endif ?>
 
   </div> <!-- /.container -->
+  
 </header><!--/.header-->
 
 

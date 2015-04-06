@@ -65,6 +65,7 @@ img.alignright    { padding-left: 5px; }
 @import 'utilities';
 @import 'nav';
 @import 'blog';
+@import 'work';
 
 /* =============================================================================
                    Default Styling
@@ -200,6 +201,9 @@ footer {
 /* =============================================================================
                    Comment Styling
    ========================================================================== */
+// .navigation{
+//   width: 100%;
+// }
 
 #comments .navigation { padding:0 0 18px; }
 h3#comments-title, h3#reply-title {

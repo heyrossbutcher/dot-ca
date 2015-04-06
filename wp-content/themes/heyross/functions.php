@@ -66,7 +66,6 @@ wp_deregister_script('jquery');
   	true //load in footer
   );
 
-
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
