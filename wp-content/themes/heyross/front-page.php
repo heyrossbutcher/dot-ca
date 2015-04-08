@@ -8,13 +8,9 @@ get_header(); ?>
 
 <div class="main">
   <div class="container">
-
     <div class="content">
       
-      <?php $items = wp_get_nav_menu_items( 'main-nav' ); ?>
-      <?php $subitems = $items[0]; ?> 
-      <?php //pre_r($postid); ?> 
-      
+      <!-- Get the about section -->
       <section class="about offset" id="about">
         <div class="wrapper">
           <div class="innerWrapper">
@@ -25,14 +21,12 @@ get_header(); ?>
                 'posts_per_page' => -1
               )) ?> 
               <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
-
                 <?php $aboutId = get_the_ID(); //Get the post id?>
-                <?php //pre_r($postid); ?> 
-
                 <div class="about_block">
                   <p><?php the_field('about_block');  //Get the About Block ?></p>
                 </div>
 
+                <!-- This if statements checks which about is first and and adds the extra styling -->
                 <?php if($aboutId == 21) : ?>
                     <?php //Get the list of skills ?>
                       <div class="spacer">
@@ -49,18 +43,19 @@ get_header(); ?>
                     }; ?>
                 <?php endif; ?>   
 
-
                   <?php //Get the list of tools ?>
                   <?php $taxonomyTools = get_the_terms($post->ID, 'tools');
-                    foreach ($taxonomyTools as $taxonomyTool) {
+                    foreach ($taxonomyTools as $taxonomyTool ) {
                       echo '<div class="skills '.$taxonomyTool->name.'">'.$taxonomyTool->name.'</div>';
                   }; ?>
                 <?php endwhile; // end of the loop. ?>
+                <?php wp_reset_postdata(); ?>
               <?php //End of grabbing About stuff ?>
               </div><!-- ///////////End out of INNER WRAPPER/////////// -->
           </div><!-- ///////////End out of WRAPPER  /////////// -->
       </section><!-- ///////////End out of ABOUT/////////// -->
       
+      <!-- Get the work section -->
       <section class="work offset" id="work">
         <div class="wrapper">
           <div class="innerWrapper">
@@ -114,9 +109,11 @@ get_header(); ?>
                   </div>
                 </div><!-- ///////////End out of WRAPPER  /////////// -->
               <?php endwhile; // end of the loop. ?>
+              <?php wp_reset_postdata(); ?>
             <?php //End of grabbing Portfolio pieces ?>
       </section><!-- ///////////End out of WORK/////////// -->
-
+      
+      <!-- Get the blog section -->
       <section class="thoughts offset" id="thoughts">
         <div class="wrapper">
           <div class="blogWrapper clearfix">
@@ -127,24 +124,27 @@ get_header(); ?>
                 'posts_per_page' => 4
               )) ?> 
               <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-                <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/blogs.jpg)" data-num='<?php the_ID(); ?>'>
-                      <h3 class="entry-title"><?php the_title(); ?></h3>
-                      <div class="blog_copy">
-                        <div class="blog_link">
-                          <a href="<?php the_permalink(); ?>">Click to read</a>
-                        </div>
+                  <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/blogs.jpg)" data-num='<?php the_ID(); ?>'>
+                    <h3 class="entry-title"><?php the_title(); ?></h3>
+                    <div class="blog_copy">
+                      <div class="blog_link">
+                        <a href="<?php the_permalink(); ?>">Click to read</a>
                       </div>
-                </div>
+                    </div>
+                  </div>
               <?php endwhile; // end of the loop. ?>
+
+              <?php wp_reset_postdata(); ?>
             <?php //End of grabbing blog pieces ?>
             <div class="blogs_link">
-              <a href="#">Read all the entries</a>
+              <a href="<?php echo get_post_type_archive_link( 'posts' ); ?>">Read all the entries</a>
               <?php //pre_r(get_post_type_archive_link( 'work' )); ?> 
             </div>
           </div><!-- ///////////End out of BLOG WRAPPER/////////// -->
         </div><!-- ///////////End out of WRAPPER  /////////// -->
       </section><!-- ///////////End out of BLOG/////////// -->
-
+      
+      <!-- Get the contact section -->
       <section class="contact offset" id="contact">
         <div class="wrapper">
           <div class="contactWrapper">
@@ -157,11 +157,13 @@ get_header(); ?>
               <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
                 <?php the_content(); ?> 
               <?php endwhile; // end of the loop. ?>
+              <?php wp_reset_postdata(); ?>
             <?php //End of grabbing Contact pieces ?>
           </div><!-- ///////////End out of INNER WRAPPER/////////// -->
         </div><!-- ///////////End out of WRAPPER  /////////// -->
       </section><!-- ///////////End out of CONTACT/////////// -->
-
+      
+      <!-- Get the thanks section -->
       <section class="thanks">
         <div class="wrapper">
           <div class="innerWrapper">
@@ -175,6 +177,7 @@ get_header(); ?>
                 <!-- <h3><?php the_field('subhead');  //Get the subhead ?></h3> -->
                 <p><?php the_field('copy_block');  //Get the copy block ?></p>
               <?php endwhile; // end of the loop. ?>
+              <?php wp_reset_postdata(); ?>
             <?php //End of Thanks ?>
           </div><!-- ///////////End out of INNER WRAPPER/////////// -->
         </div><!-- ///////////End out of WRAPPER  /////////// -->

@@ -26,6 +26,7 @@
     <div class="container masthead clearfix">
       <div class="logo">
         <h1>
+          <!-- Get the main icon and name -->
           <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
           </a>
@@ -33,8 +34,7 @@
       </div>
       <div class="social">
 
-
-
+        <!-- Get the social icons -->
         <?php $latestPosts = new wp_query(array(
           'post_type' => 'social',//Get the Social posts
           'posts_per_page' => -1
@@ -52,10 +52,11 @@
         <!-- <div class="call">CALL 647.668.6850</div> -->
 
 
-      </div>
-    </div>
-
-    <?php if(!is_single()) : ?>
+      </div><!-- End of Social -->
+    </div><!-- End of container -->
+    
+    <!-- Check if Front-page or inner page -->
+    <?php if(is_front_page()) : ?>
       <div class="jumbotron">
         <!-- <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt=""> -->
       </div>
@@ -72,7 +73,7 @@
       </nav>
     <?php endif ?>
 
-  </div> <!-- /.container -->
+  </div> <!-- /.wrapper -->
   
 </header><!--/.header-->
 

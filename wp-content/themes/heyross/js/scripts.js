@@ -35,20 +35,18 @@ app.work_piece = function(){
 }
 //BLOG FUNCTIONALITY
 //ROLLOVERS & OPEN
-app.blog_piece = function(){
-	$('.blog_post').on('mouseenter', function(){
-		$(this).css('background-size','230%');
-		$(this).addClass('blog_border');
-		app.bpNum = $(this).data('num');
-		app.bpShow = '.bp_' + app.bpNum + ' .blog_copy';
-		// $(app.bpShow).toggle( 'slide' );
-	});
-	$('.blog_post').on('mouseleave', function(){
-		$(this).css('background-size','220%');
-		$(this).removeClass('blog_border');
-		// $(app.bpShow).toggle( 'slide' );
-	});
-}
+// app.blog_piece = function(){
+// 	$('.blog_post').on('mouseenter', function(){
+// 		// $(this).addClass('blog_border');
+// 		app.bpNum = $(this).data('num');
+// 		app.bpShow = '.bp_' + app.bpNum + ' .blog_copy';
+// 		// $(app.bpShow).toggle( 'slide' );
+// 	});
+// 	$('.blog_post').on('mouseleave', function(){
+// 		// $(this).removeClass('blog_border');
+// 		// $(app.bpShow).toggle( 'slide' );
+// 	});
+// }
 //
 //STICKY NAV FUNCTIONALITY
 app.mn = $('.top_nav');
@@ -81,9 +79,7 @@ app.smoothScroller = function(){
 //////////////////
 app.init = function(){
 	app.work_piece();
-	app.blog_piece();
 	app.smoothScroller();
-	//app.setNavWidth();
 };
 //////////////////
 //DOCUMENT READY
