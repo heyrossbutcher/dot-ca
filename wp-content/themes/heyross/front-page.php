@@ -124,7 +124,11 @@ get_header(); ?>
                 'posts_per_page' => 4
               )) ?> 
               <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-                  <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/blogs.jpg)" data-num='<?php the_ID(); ?>'>
+                <?php $blogImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'blog_thumb' );   ?>
+                <?php $src =  $blogImage[0]; ?>
+                <?php //pre_r($src); ?> 
+
+                  <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php echo $src; ?>)" data-num='<?php the_ID(); ?>'>
                     <h3 class="entry-title"><?php the_title(); ?></h3>
                     <div class="blog_copy">
                       <div class="blog_link">
@@ -136,8 +140,8 @@ get_header(); ?>
 
               <?php wp_reset_postdata(); ?>
             <?php //End of grabbing blog pieces ?>
-            <div class="blogs_link">
-              <a href="<?php echo get_post_type_archive_link( 'posts' ); ?>">Read all the entries</a>
+            <div class="blogs_link see-all-posts">
+            <a href="http://localhost:8888/001Portfolio/blog-archives/">Read all the entries</a>
               <?php //pre_r(get_post_type_archive_link( 'work' )); ?> 
             </div>
           </div><!-- ///////////End out of BLOG WRAPPER/////////// -->

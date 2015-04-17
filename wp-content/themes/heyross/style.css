@@ -271,6 +271,12 @@ img.alignright {
 .push {
   margin-top: 70px; }
 
+.block-it {
+  display: block; }
+
+.inline-block-it {
+  display: inline-block; }
+
 .main-nav-scrolled {
   position: fixed;
   top: 94px;
@@ -326,11 +332,69 @@ nav {
 
 .my_post {
   margin-top: 190px; }
+  .my_post .entry-content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin: 35px 0 0 0; }
+  .my_post .entry-content h3 {
+    font-size: 2rem;
+    margin: 45px 0 5px 0; }
+  .my_post .entry-content p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 20px; }
+  .my_post .entry-content pre {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 30px 0;
+    padding: 20px; }
+  .my_post .entry-content a {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
+    .my_post .entry-content a:hover {
+      border-bottom: 1px solid #808080;
+      color: #808080;
+      text-decoration: none; }
+  .my_post .entry-content blockquote {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ffffff;
+    letter-spacing: 0.75px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 4px; }
+    .my_post .entry-content blockquote a {
+      color: #ffffff;
+      font-weight: 400;
+      text-decoration: none;
+      padding-bottom: 1px;
+      border-bottom: 1px solid #ffffff; }
+      .my_post .entry-content blockquote a:hover {
+        border-bottom: 1px solid #808080;
+        color: #808080; }
   .my_post h2 {
     font-family: 'Merriweather', serif;
     font-size: 3.5rem;
     border-bottom: none;
     margin-bottom: 10px; }
+
+.thanks-blog {
+  margin: 55px 0; }
+  .thanks-blog p {
+    font-size: 2.8rem !important;
+    font-family: 'Merriweather', serif; }
+
+.div-break {
+  margin-top: 15px;
+  padding: 30px 0 0 0; }
 
 .setImage {
   margin-bottom: 15px; }
@@ -373,19 +437,17 @@ nav {
     text-decoration: underline;
     color: rgba(77, 77, 77, 0.8); }
 
-.comments-area {
-  margin-top: 50px; }
-  .comments-area h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 2rem;
-    font-weight: 300; }
-  .comments-area h3#reply-title {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-top: 50px;
-    margin-bottom: 5px;
-    text-transform: uppercase; }
+.comments-area h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: 300; }
+.comments-area h3#reply-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  text-transform: uppercase; }
 
 .comment-author {
   margin: 15px 0 10px 0; }
@@ -427,7 +489,7 @@ ol .children {
 .navigation {
   display: block;
   margin-top: 15px;
-  margin-bottom: 100px; }
+  margin-bottom: 50px; }
   .navigation .nav-previous a {
     float: left;
     font-size: 1.2rem;
@@ -527,7 +589,7 @@ p {
 
 /*blockquotes*/
 blockquote {
-  background: #F7F7F7;
+  background: #000;
   margin: 0;
   padding: 20px; }
 
@@ -947,9 +1009,10 @@ header .masthead {
     width: 49%;
     max-width: 490px;
     height: 190px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     background-position: 50% 50%;
-    background-size: 220%;
+    background-size: cover;
     -webkit-transition: all 0.125s ease-in;
             transition: all 0.125s ease-in; }
     .thoughts .blog_post h3 {
@@ -992,6 +1055,8 @@ header .masthead {
       color: rgba(0, 0, 0, 0.8);
       background: #ffffff;
       border: 1px solid rgba(0, 0, 0, 0.25); }
+  .thoughts .see-all-posts {
+    clear: both; }
 
 .contact {
   margin-top: 100px; }

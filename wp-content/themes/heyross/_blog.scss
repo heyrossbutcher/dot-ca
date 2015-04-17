@@ -6,12 +6,83 @@
 //
 .my_post{
 	margin-top: 190px;
+	.entry-content{
+		h2{
+			font-family: $display-font;
+			font-size: 2.5rem;
+			margin: 35px 0 0 0;
+		}
+		h3{
+			font-size: 2rem;
+			margin: 45px 0 5px 0;
+		}
+		p{
+			font-size: 2rem;
+			font-weight: 300;
+			line-height: 1.4;
+			margin-bottom: 20px;
+		}
+		pre{
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 1.5;
+			margin: 30px 0;
+			padding: 20px;
+		}
+		a{
+			color: $black;
+			font-weight: 400;
+			text-decoration: none;
+			padding-bottom: 1px;
+			border-bottom: 1px solid $black;
+			&:hover{
+				border-bottom: 1px solid $lightgray;
+				color: $lightgray;
+			    text-decoration: none;
+			}
+		}
+		blockquote{
+			font-family: $display-font;
+			font-size: 1.5rem;
+			font-style: italic;
+			color: $default;
+			letter-spacing: 0.75px;
+			margin-top: 10px;
+			margin-bottom: 40px;
+			padding: 30px 0;
+			text-align: center;
+			border-radius: 4px;
+			a{
+				color: $default;
+				font-weight: 400;
+				text-decoration: none;
+				padding-bottom: 1px;
+				border-bottom: 1px solid $default;
+				&:hover{
+					border-bottom: 1px solid $lightgray;
+					color: $lightgray;
+				}
+			}
+		}
+	}
 	h2{
 		font-family: $display-font;
 		font-size: 3.5rem;
 		border-bottom: none;
 		margin-bottom: 10px;
 	}
+}
+.thanks-blog{
+	margin: 55px 0;
+	p{
+		font-size: 2.8rem!important;
+		font-family: $display-font;
+	}
+}
+.div-break{
+	margin-top: 15px;
+	padding: 30px 0 0 0;
+	// border-top: $borderOne;
 }
 //
 .setImage{
@@ -58,7 +129,7 @@
 	}
 }
 .comments-area{
-	margin-top: 50px;
+	// margin-top: 50px;
 	h2{
 		font-family: $body-font;
 		font-size: 2rem;
@@ -120,7 +191,7 @@ ol .children{
 .navigation{
 	display: block;
 	margin-top: 15px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	.nav-previous a{
 		float: left;
 		font-size: 1.2rem;
