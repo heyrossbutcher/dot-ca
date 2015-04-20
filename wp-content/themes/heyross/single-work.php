@@ -23,7 +23,7 @@ get_header(); ?>
 
                 <!-- Get the title of the piece -->
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                  <h2 class="entry-title"><?php the_title(); ?></h2>
+                  <h2 class="entry-title"><?php the_field('client');  //Get the Client Name ?> - <?php the_field('project_name');  //Get the Project Name ?></h2>
                   
                   <!-- Get the key image and initial write up for the piece -->
                   <div class="work-first-box clearfix">
@@ -32,7 +32,7 @@ get_header(); ?>
                           $keyImage = get_field('key_image');
                           $size = 'full'; 
                         ?>
-                       <a href="<?php echo $keyImage[url]; ?>" target="_"><img src="<?php echo $keyImage[url]; ?>" /></a> 
+                       <a href="<?php the_field('key_image_link'); ?>" target="_"><img src="<?php echo $keyImage[url]; ?>" /></a> 
                     </div>
                     <div class="key-copy">
                       <?php the_field('large_writeup');  //Get the large write-up ?>
@@ -56,9 +56,15 @@ get_header(); ?>
                           </div> 
                       <?php endif ?>
 
-                         <div class="secondary-copy">
-                           <p><?php the_sub_field('text_series'); ?></p>
-                         </div>
+                        <?php $subText = get_sub_field('text_series'); ?>
+                          <!-- This IF statement checks if there's a custom text for the image -->
+                        <?php if($subText) : ?>
+                        <div class="secondary-copy">
+                              <p><?php the_sub_field('text_series'); ?></p>
+                        </div>
+                           <?php else :?>
+                               <p></p>
+                           <?php endif ?>
                          
                     <?php endwhile //end sub fields loop ?>
                   </div>

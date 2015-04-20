@@ -74,7 +74,7 @@ get_header(); ?>
                     
                     <div class="workItem clearfix" data-num="<?php the_ID(); ?>" data-colour="<?php the_field('hover_colour');  //Get the Hover colour ?>"> 
                       <div class="titleFloat">
-                        <h3><?php the_field('client');  //Get the Client Name ?> - <?php the_field('project_name');  //Get the Client Name ?></h3>
+                        <h3><?php the_field('client');  //Get the Client Name ?><span class="project_name"> - <?php the_field('project_name');  //Get the Project Name ?></span></h3>
                       </div>
                       <div class="iconFloat">
                         <?php $taxonomyTasks = get_the_terms($post->ID, 'materials');
@@ -93,8 +93,10 @@ get_header(); ?>
                       </div><!-- ///////////End out of ICON FLOAT  /////////// -->
                     </div><!-- ///////////End out of WORK ITEM  /////////// -->
                   </div><!-- ///////////End out of Inner WRAPPER  /////////// -->
-                  <div class="work_img wp_<?php the_ID(); ?>" data-num="<?php the_ID(); ?>" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/img/work.jpg)">
+                  <?php $bgimage = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'full')  ?>
+                  <div class="work_img wp_<?php the_ID(); ?>" data-num="<?php the_ID(); ?>" style="background-image: url(<?php echo $bgimage[0]; ?>)">
                     <div class="work_copy hide">
+
                       <h4><?php the_field('project_name');  //Get the Project Name ?></h4>
                       <div class="work_excerpt">
                         <p><?php the_field('small_writeup');  //Get the Excerpt ?></p>
