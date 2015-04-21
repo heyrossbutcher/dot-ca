@@ -12,7 +12,10 @@
 	width: 100%;
 	margin: 35px 0;
 	padding-bottom: 5px;
-	// font-size: 4.5rem!important;
+}
+.entry-title{
+	font-size: 4rem;
+	text-transform: none;
 }
 
 .work-first-box{
@@ -63,7 +66,7 @@
 .view-image{
 	
 }
-.enlarge-image{
+.enlarge-image, .blog-click{
 	opacity:0;
 	width: 100%;
 	height: 100%;
@@ -90,4 +93,7 @@
 	&:hover{
 		opacity:80;
 	}
+}
+.blog-click{
+    z-index: 50;
 }

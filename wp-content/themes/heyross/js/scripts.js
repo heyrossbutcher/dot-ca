@@ -33,21 +33,16 @@ app.work_piece = function(){
 		$(app.hideCopy).toggle( 'slide');
 	});
 }
-//BLOG FUNCTIONALITY
-//ROLLOVERS & OPEN
-// app.blog_piece = function(){
-// 	$('.blog_post').on('mouseenter', function(){
-// 		// $(this).addClass('blog_border');
-// 		app.bpNum = $(this).data('num');
-// 		app.bpShow = '.bp_' + app.bpNum + ' .blog_copy';
-// 		// $(app.bpShow).toggle( 'slide' );
-// 	});
-// 	$('.blog_post').on('mouseleave', function(){
-// 		// $(this).removeClass('blog_border');
-// 		// $(app.bpShow).toggle( 'slide' );
-// 	});
-// }
-//
+//CHECK FOR SCROLL LOCATION
+app.scroll_checker = function(){
+	if( $(window).scrollTop() > app.hdr ) {
+	  app.mn.addClass(app.mns);
+	  app.cn.addClass(app.cnp);
+	} else {
+	  app.mn.removeClass(app.mns);
+	  app.cn.removeClass(app.cnp);
+	};
+}
 //STICKY NAV FUNCTIONALITY
 app.mn = $('.top_nav');
 app.mns = 'main-nav-scrolled';
@@ -56,14 +51,7 @@ app.cnp = 'push';
 app.hdr = 360;
 //
 $(window).scroll(function() {
-  if( $(this).scrollTop() > app.hdr ) {
-    app.mn.addClass(app.mns);
-    app.cn.addClass(app.cnp);
-  } else {
-    app.mn.removeClass(app.mns);
-    app.cn.removeClass(app.cnp);
-
-  };
+  app.scroll_checker();
   app.win = $(this).scrollTop();
   app.about = $( ".thoughts" ).offset().top;
   app.scrollNum = app.about - app.win;
@@ -73,12 +61,14 @@ $(window).scroll(function() {
 //END STICKY NAV
 app.smoothScroller = function(){
 	$("nav a").smoothScroll({ offset: -25 });
+	$("h1 a").smoothScroll({ offset: -120 });
 }
 //////////////////
 //INIT FUNCTION
 //////////////////
 app.init = function(){
 	app.work_piece();
+	app.scroll_checker();
 	app.smoothScroller();
 };
 //////////////////

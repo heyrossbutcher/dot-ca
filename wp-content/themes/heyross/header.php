@@ -27,37 +27,48 @@
       <div class="logo">
         <h1>
           <!-- Get the main icon and name -->
-          <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-            <?php bloginfo( 'name' ); ?>
-          </a>
+          <?php if( is_front_page() ) : ?>
+            <a href="#jumbotron" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+              <?php bloginfo( 'name' ); ?>
+            </a>
+          <?php else :?>
+            <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+              <?php bloginfo( 'name' ); ?>
+            </a>            
+          <?php endif ?>
         </h1>
       </div>
-      <div class="social">
+      <div class="connect_me">
+        <div class="call">
+          Reach me at <span class="phone-number">647.668.6850</span>
+        </div>
+          <!-- Get the social icons -->
+        <div class="social">
 
-        <!-- Get the social icons -->
-        <?php $latestPosts = new wp_query(array(
-          'post_type' => 'social',//Get the Social posts
-          'posts_per_page' => -1
-        )) ?>
-        <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
-          
-            <div class="social_btns <?php the_field('which_social');  //Assign the class ?>">
-              <a href="<?php the_field('link_to');  //put the link ?>" target="blank" title="<?php the_field('which_social');  //Assign the class ?>" alt="<?php the_field('which_social');  //Assign the class ?>">
-                <?php the_field('font_awesome_link');  //Get the icon ?>
-              </a>
-            </div>
-          
-        <?php endwhile; ?><!-- //end custom loop -->
-        <div class="social_btns connect">Connect</div>
-        <!-- <div class="call">CALL 647.668.6850</div> -->
+          <?php $latestPosts = new wp_query(array(
+            'post_type' => 'social',//Get the Social posts
+            'posts_per_page' => -1
+          )) ?>
+          <div class="social_btns connect">Connect at</div>
+          <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
+            
+              <div class="social_btns <?php the_field('which_social');  //Assign the class ?>">
+                <a href="<?php the_field('link_to');  //put the link ?>" target="blank" title="<?php the_field('which_social');  //Assign the class ?>" alt="<?php the_field('which_social');  //Assign the class ?>">
+                  <?php the_field('font_awesome_link');  //Get the icon ?>
+                </a>
+              </div>
+            
+          <?php endwhile; ?><!-- //end custom loop -->
+          <!-- <div class="call">CALL 647.668.6850</div> -->
 
 
-      </div><!-- End of Social -->
+        </div><!-- End of Social -->
+      </div><!-- End of connect me -->
     </div><!-- End of container -->
     
     <!-- Check if Front-page or inner page -->
     <?php if(is_front_page()) : ?>
-      <div class="jumbotron">
+      <div class="jumbotron" id="jumbotron">
         <!-- <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt=""> -->
       </div>
       <nav class="top_nav clearfix">

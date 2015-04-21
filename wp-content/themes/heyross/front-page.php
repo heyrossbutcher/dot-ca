@@ -135,7 +135,7 @@ get_header(); ?>
               )) ?> 
               <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-                <?php $blogImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'blog_thumb' );   ?>
+                <?php $blogImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'blog_large_thumb' );   ?>
                 <?php $src =  $blogImage[0]; ?>
                 <?php //pre_r($src); ?> 
                   
@@ -145,6 +145,9 @@ get_header(); ?>
                       <div class="blog_link">
                         <a href="<?php the_permalink(); ?>">Click to read</a>
                       </div>
+                      <a href="<?php the_permalink(); ?>">
+                        <div class="blog-click"></div>
+                      </a>
                     </div>
                   </div>
 

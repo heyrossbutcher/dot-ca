@@ -39,27 +39,47 @@ section{
       padding: 12px 45px 12px 30px;
       color: $default;
       text-decoration: none;
+      transition: all 0.25s ease-in;
+      &:hover{
+        background: $mediumblue;
+      }
     }
   }
 }
-// .call{
-//   float: right;
-// }
-.social{
+.connect_me{
   float: right;
-  max-width: 50%;
-  margin-top: 38px;
+  width: 210px;
+  max-width: 210px;
+  font-size: 1.6rem;
+  margin-top: 25px;
+}
+.call{
+  float: left;
+  // text-transform:  ;
+  .phone-number{
+    margin-left: 6px;
+    color: $black;
+    // letter-spacing: 0.5px;
+  }
+}
+.social{
+  float: left;
+  max-width: 100%;
+  margin-top: 3px;
+  // margin-top: 38px;
   .social_btns{
-    float: right;
+    float: left;
     text-align: right;
-    max-width: 150px;
-    padding-left: 15px;
+    max-width: 170px;
+    padding-left: 12px;
     font-size: 3.5rem;
   }
   .connect{
-    font-size:1.4rem;
-    text-transform: uppercase;
+    font-size:1.6rem;
+    // text-transform: uppercase;
     margin-top: 15px;
+    padding-left:0;
+    color: $black;
   }
   .LinkedIn a{
     color: $purple;
@@ -106,7 +126,7 @@ header{
   .masthead{
     position: fixed;
     top: 0;
-    z-index: 100;  
+    z-index: 1000;  
     width: 1100px;
     height: 120px;
     background: $default;  
@@ -138,11 +158,6 @@ header{
 }
 .work{
   margin-top: 100px;
-  h2{
-    // text-transform: none;
-    font-size: 4rem;
-    letter-spacing: -1px;
-  }
   .workItem{
     border-top: $borderOne;
     transition: $animatorOne;
@@ -248,6 +263,8 @@ header{
     background-position: 50% 50%;
     background-size: cover;
     transition: $animatorTwo;
+    position: relative;
+    z-index: 100;
     h3{
       font-family: $body-font;
       font-size: 2.2rem;
@@ -258,6 +275,8 @@ header{
       margin-top: 15px;
       padding: 10px 20px;
       display: inline-block;
+      position: relative;
+      z-index: 200;
     }
     .blog_link a{
       color: $default;
@@ -269,6 +288,8 @@ header{
       text-decoration: none;
       display: inline-block;
       transition: $animatorOne;
+      position: relative;
+      z-index: 300;
       &:hover{
         color: $black;
         background: $default;
