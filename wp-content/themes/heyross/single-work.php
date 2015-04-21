@@ -23,16 +23,23 @@ get_header(); ?>
 
                 <!-- Get the title of the piece -->
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                  <h2 class="entry-title"><?php the_field('client');  //Get the Client Name ?> - <?php the_field('project_name');  //Get the Project Name ?></h2>
-                  
+                  <?php $projName = get_field('project_name'); ?>
+                  <?php if($projName) : ?>
+                  <h2 class="entry-title"><span class="client_name"><?php the_field('client');  //Get the Client Name ?> - </span><span class="project_name"><?php the_field('project_name');  //Get the Project Name ?></span></h2>
+                  <?php else :?>
+                      <h2 class="entry-title"><span class="client_name"><?php the_field('client');  //Get the Client Name ?></span></h2>
+                  <?php endif ?>
                   <!-- Get the key image and initial write up for the piece -->
                   <div class="work-first-box clearfix">
                       <div class="key-image work-image">
                         <?php 
-                          $keyImage = get_field('key_image');
+                         $keyImage = get_field('key_image');
                           $size = 'full'; 
                         ?>
-                       <a href="<?php the_field('key_image_link'); ?>" target="_"><img src="<?php echo $keyImage[url]; ?>" /></a> 
+                      <a href="<?php the_field('key_image_link'); ?>" target="_">
+                        <div class="enlarge-image"><p><i class="fa fa-search"></i></p></div>
+                        <img src="<?php echo $keyImage[url]; ?>" />
+                      </a> 
                     </div>
                     <div class="key-copy">
                       <?php the_field('large_writeup');  //Get the large write-up ?>
@@ -44,18 +51,44 @@ get_header(); ?>
                     <?php while(has_sub_field('work_series')) : ?>
                       <?php $subImage = get_sub_field('image_series'); ?>
                       <?php $subLink = get_sub_field('video_series'); ?>
+                      <?php $borderCheck = get_sub_field('border_boolean'); ?>
+                        <?php if($borderCheck) : ?><!-- START Border check -->
 
-                      <!-- This IF statement checks if there's a custom link for the image or just the default enlarge image link is needed -->
-                      <?php if($subLink) : ?>
-                         <div class="secondary-image work-image">
-                           <a href="<?php the_sub_field('video_series'); ?>" target="_"><img src="<?php echo $subImage[url]; ?>" ></a>
-                         </div>
-                      <?php else :?>
-                          <div class="secondary-image view-image">
-                            <a href="<?php echo $subImage[url]; ?>" target="_"><img src="<?php echo $subImage[url]; ?>" ></a>
-                          </div> 
-                      <?php endif ?>
+                          <?php if($subLink) : ?><!-- START IF statement checks if there's a custom link for the image -->
+                            <div class="secondary-image work-image border-it">                          
+                              <a href="<?php the_sub_field('video_series'); ?>" target="_">
+                                <div class="enlarge-image"><p><i class="fa fa-search"></i></p></div>
+                                <img src="<?php echo $subImage[url]; ?>"  >
+                              </a>
+                            </div>
+                          <?php else :?>
+                              <div class="secondary-image view-image border-it">
+                                <a href="<?php echo $subImage[url]; ?>" target="_">
+                                  <div class="enlarge-image"><p><i class="fa fa-search"></i></p></div>
+                                  <img src="<?php echo $subImage[url]; ?>" >
+                                </a>
+                              </div> 
+                          <?php endif ?><!-- END Custom link -->
 
+                        <?php else :?>
+                            
+                          <?php if($subLink) : ?><!-- START IF statement checks if there's a custom link for the image -->
+                            <div class="secondary-image work-image">
+                              <a href="<?php the_sub_field('video_series'); ?>" target="_">
+                                <div class="enlarge-image"><p><i class="fa fa-search"></i></p></div>
+                                <img src="<?php echo $subImage[url]; ?>"  >
+                              </a>
+                            </div>
+                          <?php else :?>
+                              <div class="secondary-image view-image">
+                                <a href="<?php echo $subImage[url]; ?>" target="_">
+                                  <div class="enlarge-image"><p><i class="fa fa-search"></i></p></div>
+                                  <img src="<?php echo $subImage[url]; ?>" >
+                                </a>
+                              </div> 
+                          <?php endif ?><!-- END Custom link -->
+
+                        <?php endif ?><!-- END Border check -->
                         <?php $subText = get_sub_field('text_series'); ?>
                           <!-- This IF statement checks if there's a custom text for the image -->
                         <?php if($subText) : ?>

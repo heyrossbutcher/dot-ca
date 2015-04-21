@@ -4,6 +4,7 @@ $animatorTwo: all 0.125s ease-in;
 $borderOne: 1px solid $border;
 $borderTwo: 4px solid $borderFull;
 $borderThree: 1px solid $borderCtwo;
+$borderFaint: 1px solid $faintgray;
 
 .hide{
 	display: none;
@@ -22,4 +23,7 @@ $borderThree: 1px solid $borderCtwo;
 }
 .inline-block-it{
 	display: inline-block;
+}
+.border-it{
+	border: $borderFaint;
 }

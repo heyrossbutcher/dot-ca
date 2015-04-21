@@ -277,6 +277,9 @@ img.alignright {
 .inline-block-it {
   display: inline-block; }
 
+.border-it {
+  border: 1px solid #e7e7e7; }
+
 .main-nav-scrolled {
   position: fixed;
   top: 94px;
@@ -534,14 +537,17 @@ ol .children {
 
 .work_post h2 {
   width: 100%;
-  margin: 50px 0;
+  margin: 35px 0;
   padding-bottom: 5px; }
 
 .work-first-box .key-image {
   width: 60%;
   float: left;
   margin-bottom: 35px;
-  margin-right: 4%; }
+  margin-right: 4%;
+  position: relative; }
+  .work-first-box .key-image img {
+    float: left; }
 .work-first-box .key-copy {
   font-family: 'Merriweather', serif;
   font-size: 2rem;
@@ -556,7 +562,10 @@ ol .children {
   width: 60%;
   float: left;
   margin-bottom: 35px;
-  margin-right: 4%; }
+  margin-right: 4%;
+  position: relative; }
+  .work-extra-box .secondary-image img {
+    float: left; }
 .work-extra-box .secondary-copy {
   margin: 0;
   padding: 30px;
@@ -564,6 +573,37 @@ ol .children {
   width: 36%;
   max-width: 400px;
   background: rgba(0, 0, 0, 0.05); }
+
+.enlarge-image {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease-in;
+          transition: all 0.25s ease-in; }
+  .enlarge-image p {
+    color: #ffffff;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 5px 14px;
+    border-radius: 50%;
+    -webkit-transition: all 0.25s ease-in;
+            transition: all 0.25s ease-in; }
+  .enlarge-image:hover {
+    opacity: 80; }
 
 /* =============================================================================
                    Default Styling
@@ -843,11 +883,11 @@ p.form-allowed-tags, .nocomments {
   .logo h1 {
     font-size: 3rem;
     font-family: 'Merriweather', serif;
-    margin: 0;
-    padding: 12px 45px 12px 30px;
-    background: rgba(0, 0, 0, 0.8);
     display: inline; }
     .logo h1 a {
+      background: rgba(0, 0, 0, 0.8);
+      margin: 0;
+      padding: 12px 45px 12px 30px;
       color: #ffffff;
       text-decoration: none; }
 
@@ -880,7 +920,8 @@ p.form-allowed-tags, .nocomments {
 
 .title {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
 
 h2 {
   font-family: 'Merriweather', serif;
@@ -925,6 +966,9 @@ header .masthead {
 
 .work {
   margin-top: 100px; }
+  .work h2 {
+    font-size: 4rem;
+    letter-spacing: -1px; }
   .work .workItem {
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     -webkit-transition: all 0.25s ease-in;
@@ -950,6 +994,7 @@ header .masthead {
   height: 375px;
   background: #ffffff;
   margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: none;
   background-position: 50% 50%; }
   .work_img .work_copy {
@@ -972,7 +1017,8 @@ header .masthead {
         letter-spacing: 0.1px;
         padding: 20px;
         padding-left: 35px;
-        border: 1px solid rgba(0, 0, 0, 0.25); }
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: none; }
     .work_img .work_copy .work_link a {
       color: #ffffff;
       background: rgba(0, 0, 0, 0.8);
@@ -1041,7 +1087,10 @@ header .masthead {
         color: rgba(0, 0, 0, 0.8);
         background: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.25); }
-  .thoughts .blog_post:nth-child(2n+3) {
+  .thoughts .blog_post:nth-child(2) {
+    width: 100%;
+    max-width: 100%; }
+  .thoughts .blog_post:nth-child(4) {
     margin-left: 2%; }
   .thoughts .blogs_link a {
     color: #ffffff;

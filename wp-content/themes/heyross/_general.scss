@@ -32,11 +32,11 @@ section{
   h1{
     font-size: 3rem;
     font-family: $display-font;
-    margin: 0;
-    padding: 12px 45px 12px 30px;
-    background: $black;
     display: inline;
     a{
+      background: $black;
+      margin: 0;
+      padding: 12px 45px 12px 30px;
       color: $default;
       text-decoration: none;
     }
@@ -83,6 +83,7 @@ section{
 .title{
   width: 100%;
   text-align: center;
+  text-transform: uppercase;
 }
 h2{
   font-family: $display-font; 
@@ -137,6 +138,11 @@ header{
 }
 .work{
   margin-top: 100px;
+  h2{
+    // text-transform: none;
+    font-size: 4rem;
+    letter-spacing: -1px;
+  }
   .workItem{
     border-top: $borderOne;
     transition: $animatorOne;
@@ -161,14 +167,16 @@ header{
     }
   }
 }
+
 .work_img{
   max-width: 1100px;
   height: 375px;
   background: $default;
   margin-bottom: 15px;
-  // border: $borderOne;
+  border: $borderThree;
   display: none;
   background-position: 50% 50%;
+  // background-size: contain;
   .work_copy{
     float: left;
     width: 50%;
@@ -191,7 +199,8 @@ header{
         letter-spacing: 0.1px;
         padding: 20px;  
         padding-left: 35px;
-        border: $borderOne;
+        border: $borderThree;
+        border-left: none;
       }
     }
     .work_link a{
@@ -267,7 +276,11 @@ header{
       }
     }
   }
-  .blog_post:nth-child(2n+3){
+  .blog_post:nth-child(2){
+    width: 100%;
+    max-width: 100%;
+  }
+  .blog_post:nth-child(4){
     margin-left: 2%;
   }
   .blogs_link a{

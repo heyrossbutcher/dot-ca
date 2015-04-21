@@ -68,13 +68,18 @@ get_header(); ?>
                 'posts_per_page' => -1
               )) ?> 
               <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
-                <div class="wrapper">
-                  <div class="innerWrapper">
+                <div class="wrapper clearfix">
+                  <div class="innerWrapper clearfix">
                     <?php $workId = get_the_ID(); //Get the work id ?>
                     
                     <div class="workItem clearfix" data-num="<?php the_ID(); ?>" data-colour="<?php the_field('hover_colour');  //Get the Hover colour ?>"> 
                       <div class="titleFloat">
-                        <h3><?php the_field('client');  //Get the Client Name ?><span class="project_name"> - <?php the_field('project_name');  //Get the Project Name ?></span></h3>
+                        <?php $projName = get_field('project_name'); ?>
+                        <?php if($projName) : ?>
+                          <h3><?php the_field('client');  //Get the Client Name ?><span class="project_name"> - <?php the_field('project_name');  //Get the Project Name ?></span></h3>
+                        <?php else :?>
+                          <h3><?php the_field('client');  //Get the Client Name ?></h3>
+                        <?php endif ?>
                       </div>
                       <div class="iconFloat">
                         <?php $taxonomyTasks = get_the_terms($post->ID, 'materials');
@@ -96,8 +101,11 @@ get_header(); ?>
                   <?php $bgimage = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'full')  ?>
                   <div class="work_img wp_<?php the_ID(); ?>" data-num="<?php the_ID(); ?>" style="background-image: url(<?php echo $bgimage[0]; ?>)">
                     <div class="work_copy hide">
-
-                      <h4><?php the_field('project_name');  //Get the Project Name ?></h4>
+                      <?php if($projName) : ?>
+                        <h4><?php the_field('project_name');  //Get the Project Name ?></h4>
+                      <?php else :?>
+                        <h4><?php the_field('client');  //Get the Project Name ?></h4>
+                      <?php endif ?>
                       <div class="work_excerpt">
                         <p><?php the_field('small_writeup');  //Get the Excerpt ?></p>
                       </div>
@@ -126,11 +134,12 @@ get_header(); ?>
                 'posts_per_page' => 4
               )) ?> 
               <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
                 <?php $blogImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'blog_thumb' );   ?>
                 <?php $src =  $blogImage[0]; ?>
                 <?php //pre_r($src); ?> 
-
-                  <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php echo $src; ?>)" data-num='<?php the_ID(); ?>'>
+                  
+                  <div class="blog_post bp_<?php the_ID(); ?>" style="background-image: url(<?php echo $src; ?>)" data-num="<?php the_ID(); ?>">
                     <h3 class="entry-title"><?php the_title(); ?></h3>
                     <div class="blog_copy">
                       <div class="blog_link">
@@ -138,14 +147,15 @@ get_header(); ?>
                       </div>
                     </div>
                   </div>
+
               <?php endwhile; // end of the loop. ?>
 
               <?php wp_reset_postdata(); ?>
             <?php //End of grabbing blog pieces ?>
-            <div class="blogs_link see-all-posts">
+           <!--  <div class="blogs_link see-all-posts">
             <a href="http://localhost:8888/001Portfolio/blog-archives/">Read all the entries</a>
               <?php //pre_r(get_post_type_archive_link( 'work' )); ?> 
-            </div>
+            </div> -->
           </div><!-- ///////////End out of BLOG WRAPPER/////////// -->
         </div><!-- ///////////End out of WRAPPER  /////////// -->
       </section><!-- ///////////End out of BLOG/////////// -->

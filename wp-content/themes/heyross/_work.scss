@@ -10,15 +10,21 @@
 }
 .work_post h2{
 	width: 100%;
-	margin: 50px 0;
+	margin: 35px 0;
 	padding-bottom: 5px;
+	// font-size: 4.5rem!important;
 }
+
 .work-first-box{
 	.key-image{
 		width: 60%;
 		float: left;
 		margin-bottom: 35px;
 		margin-right: 4%;
+		position: relative;
+		img{
+			float: left;
+		}
 	}
 	.key-copy{
 		font-family: $display-font;
@@ -37,6 +43,10 @@
 		float: left;
 		margin-bottom: 35px;
 		margin-right: 4%;
+		position: relative;
+		img{
+			float: left;
+		}
 	}
 	.secondary-copy{
 		margin: 0;
@@ -52,4 +62,32 @@
 }
 .view-image{
 	
+}
+.enlarge-image{
+	opacity:0;
+	width: 100%;
+	height: 100%;
+	background: rgba($default,0.35);
+	position: absolute;
+	top: 0;
+	left:0;
+	transition: all 0.25s ease-in;
+	p{
+		color: $default;
+		font-size: 2rem;
+		background: $black;
+		display: inline-block;
+		position: relative;
+		top: 45%;
+		left:50%;
+		transform: translateY(-50%);
+		transform: translateX(-50%);
+		padding: 5px 14px;
+		// border: 5px solid $black;
+		border-radius: 50%;
+		transition: all 0.25s ease-in;
+	}
+	&:hover{
+		opacity:80;
+	}
 }
