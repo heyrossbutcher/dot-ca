@@ -1,0 +1,50 @@
+// _grid.scss
+.grid_square{
+  width: 10px;
+  height: 10px;
+  background: $default;
+  border-right: 1px solid $default;
+  border-bottom: 1px solid $default;
+  position: absolute;
+  transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+}
+.gridRlvr{
+  transition: all .25s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  &:hover{
+    background: $default;
+  }
+}
+.bg_one{
+  background: $maroon;
+}
+.bg_two{
+  background: $burntorange;
+}
+.bg_three{
+  background: $richgray;
+}
+.bg_four{
+  background: $cherry;
+}
+.bg_five{
+  background: $darkgray;
+}
+.bg_six{
+  background: $lightblue;
+}
+.bg_seven{
+  background: $lightorange;
+}
+.bg_eight{
+  background: $deepblue;
+}
+.bg_nine{
+  background: $mediumblue;
+}
+.bg_ten{
+  background: $pink;
+}
+.bg_black{
+  background: $lightblue;
+}
