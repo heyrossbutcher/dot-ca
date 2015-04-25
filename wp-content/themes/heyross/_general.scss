@@ -41,7 +41,7 @@ section{
       text-decoration: none;
       transition: all 0.25s ease-in;
       &:hover{
-        background: $mediumblue;
+        background: $lightgray;
       }
     }
   }
@@ -140,7 +140,7 @@ header{
   background: $default;
   margin: 0;
   padding: 0;
-  margin-top: 155px;
+  margin-top: 120px;
   position: relative;
 }
 
@@ -392,3 +392,4 @@ header{
     text-align: center;
   }
 }
+//

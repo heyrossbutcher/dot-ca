@@ -15,7 +15,7 @@
                   <div class="entry-meta">
                     <?php heyross_posted_on(); ?>
                   </div><!-- .entry-meta -->
-
+                  
                   <div class="entry-content">
                     <div class="setImage"> <?php the_post_thumbnail('blog'); ?></div>
                     <?php the_content(); ?>

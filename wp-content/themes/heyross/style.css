@@ -612,23 +612,58 @@ ol .children {
 .blog-click {
   z-index: 50; }
 
-.dd_button_v {
-  margin-bottom: 10px; }
+.crunchify-link {
+  padding: 5px 10px;
+  color: white;
+  font-size: 12px; }
+
+.crunchify-link:hover, .crunchify-link:active {
+  color: white; }
+
+.crunchify-twitter {
+  background: #41B7D8; }
+
+.crunchify-twitter:hover, .crunchify-twitter:active {
+  background: #279ebf; }
+
+.crunchify-facebook {
+  background: #3B5997; }
+
+.crunchify-facebook:hover, .crunchify-facebook:active {
+  background: #2d4372; }
+
+.crunchify-googleplus {
+  background: #D64937; }
+
+.crunchify-googleplus:hover, .crunchify-googleplus:active {
+  background: #b53525; }
+
+.crunchify-buffer {
+  background: #444; }
+
+.crunchify-buffer:hover, .crunchify-buffer:active {
+  background: #222; }
+
+.crunchify-social {
+  margin: 20px 0px 25px 0px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px; }
 
 .grid_square {
   width: 10px;
   height: 10px;
   background: #ffffff;
-  border-right: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
   position: absolute;
-  -webkit-transition: all 1.5s ease;
-          transition: all 1.5s ease;
+  -webkit-transition: all 4.5s ease;
+          transition: all 4.5s ease;
   -moz-transition: all 1.5s ease; }
 
 .gridRlvr {
   -webkit-transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1);
-          transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1); }
+          transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1); }
   .gridRlvr:hover {
     background: #ffffff; }
 
@@ -662,8 +697,8 @@ ol .children {
 .bg_ten {
   background: #ED1E79; }
 
-.bg_black {
-  background: #00B0F9; }
+.bg_blank {
+  background: transparent; }
 
 /* =============================================================================
                    Default Styling
@@ -953,7 +988,7 @@ p.form-allowed-tags, .nocomments {
       -webkit-transition: all 0.25s ease-in;
               transition: all 0.25s ease-in; }
       .logo h1 a:hover {
-        background: #005487; }
+        background: #808080; }
 
 .connect_me {
   float: right;
@@ -1031,7 +1066,7 @@ header .masthead {
   background: #ffffff;
   margin: 0;
   padding: 0;
-  margin-top: 155px;
+  margin-top: 120px;
   position: relative; }
 
 .about {
