@@ -143,6 +143,16 @@ header{
   margin-top: 120px;
   position: relative;
 }
+.jumbotron_static{
+  max-width: 1100px;
+  height: 300px;
+  background: $black;
+  margin: 0;
+  padding: 0;
+  margin-top: 120px;
+  position: relative;
+  display: none;
+}
 
 ///ABOUT//////////////////////////
 .about{
@@ -162,6 +172,15 @@ header{
   .workItem{
     border-top: $borderOne;
     transition: $animatorOne;
+    cursor: pointer;
+    // .work_close_bar{
+    //   float: right;
+    //   display: none;
+    //   font-size: 2rem;
+    //   margin: 18px 10px;
+    //   display: none;
+    //   color: $black;
+    // }
     .titleFloat{
       float: left;
       h3{
@@ -240,15 +259,17 @@ header{
   .work_close{
     font-family: $display-font;
     font-size: 1.5rem;
-    background: $default;
+    color: $default;
+    background: $black;
     float: right;
     padding: 5px 7px 2px 7px;
     margin: 7px;
     display: inline;
     transition: $animatorTwo;
+    cursor: pointer;
     &:hover{
-      color: $default;
-      background: $black;
+      color: $black;
+      background: $default;
     }
   }
 }
@@ -270,13 +291,15 @@ header{
       font-family: $body-font;
       font-size: 2.2rem;
       font-weight: 300;
-      background: $black;
-      color: $default;
+      background: $default;
+      color: $black;
       margin: 0;
       margin-top: 15px;
       padding: 10px 20px;
       display: inline-block;
       position: relative;
+      border: $borderOne;
+      border-left: none;
       z-index: 200;
     }
     .blog_link a{
@@ -291,6 +314,7 @@ header{
       transition: $animatorOne;
       position: relative;
       z-index: 300;
+      cursor: pointer;
       &:hover{
         color: $black;
         background: $default;

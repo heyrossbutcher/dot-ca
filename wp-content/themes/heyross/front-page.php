@@ -13,7 +13,7 @@ get_header(); ?>
       <!-- Get the about section -->
       <section class="about offset" id="about">
         <div class="wrapper">
-          <div class="innerWrapper">
+          <div class="innerWrapper aboutWrapper">
             <div class="title"><h2>About</h2></div>
             <?php //we are going to pull the about stuff ?>
               <?php $latestPosts = new wp_query(array(
@@ -72,7 +72,7 @@ get_header(); ?>
                   <div class="innerWrapper clearfix">
                     <?php $workId = get_the_ID(); //Get the work id ?>
                     
-                    <div class="workItem clearfix" data-num="<?php the_ID(); ?>" data-colour="<?php the_field('hover_colour');  //Get the Hover colour ?>"> 
+                    <div class="workItem wi_<?php the_ID(); ?> clearfix" data-num="<?php the_ID(); ?>" data-colour="<?php the_field('hover_colour');  //Get the Hover colour ?>"> 
                       <div class="titleFloat">
                         <?php $projName = get_field('project_name'); ?>
                         <?php if($projName) : ?>
@@ -81,6 +81,9 @@ get_header(); ?>
                           <h3><?php the_field('client');  //Get the Client Name ?></h3>
                         <?php endif ?>
                       </div>
+                      <!-- <div class="work_close_bar">
+                        &times;
+                      </div> -->
                       <div class="iconFloat">
                         <?php $taxonomyTasks = get_the_terms($post->ID, 'materials');
                             foreach ($taxonomyTasks as $taxonomyTask) {
@@ -114,7 +117,7 @@ get_header(); ?>
                       </div>
                     </div>
                     <div class="work_close">
-                      X
+                      &times;
                     </div>
                   </div>
                 </div><!-- ///////////End out of WRAPPER  /////////// -->
@@ -185,7 +188,7 @@ get_header(); ?>
       <!-- Get the thanks section -->
       <section class="thanks">
         <div class="wrapper">
-          <div class="innerWrapper">
+          <div class="innerWrapper thanksWrapper">
             <div class="title"><h2>Thanks for visiting</h2></div>
             <?php //we are going to pull in the latest portfolio pieces ?>
               <?php $latestPosts = new wp_query(array(

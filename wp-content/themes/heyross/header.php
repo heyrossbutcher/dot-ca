@@ -67,22 +67,26 @@
     </div><!-- End of container -->
     
     <!-- Check if Front-page or inner page -->
-    <?php if(is_front_page()) : ?>
-      <div class="jumbotron" id="jumbotron">
-        <!-- <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt=""> -->
-      </div>
-      <nav class="top_nav clearfix">
-        <div class="main_nav">
-          <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navigation -->
+    <div class="wrapper">
+      <?php if(is_front_page()) : ?>
+        <div class="jumbotron_static">
+          <p>hello</p>
         </div>
-      </nav>
-    <?php else :?>
-      <nav class="post_nav clearfix main-nav-scrolled">
-        <div class="main_nav">
-          <?php wp_nav_menu( 'inner_nav' ); ?><!-- Load in navigation -->
+        <div class="jumbotron" id="jumbotron">
+          <!-- <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt=""> -->
         </div>
-      </nav>
-    <?php endif ?>
+        <nav class="top_nav clearfix">
+          <div class="main_nav">
+            <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navigation -->
+          </div>
+        </nav>
+      <?php else :?>
+        <nav class="post_nav clearfix main-nav-scrolled">
+          <div class="main_nav">
+            <?php wp_nav_menu( 'inner_nav' ); ?><!-- Load in navigation -->
+          </div>
+        </nav>
+      <?php endif ?>
 
   </div> <!-- /.wrapper -->
   

@@ -17,7 +17,7 @@ app.mn = $('.top_nav');
 app.mns = 'main-nav-scrolled';
 app.cn = $('.content');
 app.cnp = 'push';
-app.hdr = 360;
+app.hdr = 325;
 //
 $(window).scroll(function() {
   app.scroll_checker();
@@ -36,9 +36,13 @@ app.smoothScroller = function(){
 //ROLLOVERS & OPEN
 app.work_piece = function(){
 	$('.workItem').on('mouseover', function(){
-		app.bgCol = $(this).data('colour');
-		$(this).css('background',app.bgCol);
-		$(this).addClass('makeWhite');
+		app.thisBar = $(this);
+		app.cl = app.thisBar[0].className.split(' ');
+		app.cl_id = app.cl[1];
+		app.thisBarClose = '.' + app.cl_id + ' .work_close_bar';
+		app.bgCol = app.thisBar.data('colour');
+		app.thisBar.css('background',app.bgCol);
+		app.thisBar.addClass('makeWhite');
 	});
 	$('.workItem').on('mouseout', function(){
 		$(this).css('background','#ffffff');
@@ -121,7 +125,7 @@ app.gridPattern = [
 app.gridWipe = function(){
 	var i = 0;
 	app.arrayPick = Math.floor(Math.random()*2);
-	app.pickedArray = app.gridPattern[app.arrayPick];
+	app.pickedArray = app.gridPattern[1];
 	console.log(app.pickedArray);
 	app.colourRan = Math.floor(Math.random()*app.gridList.length);//Get the random colour
 	//
@@ -137,14 +141,13 @@ app.gridWipe = function(){
 					app.griddy = app.grabSquare[0].className.split(' ');//
 					app.arr = [];
 					app.arr = app.griddy;
+					app.grabSquare.removeClass(app.arr[5]);
 					//
 					//Check the div class against the arrays to find the exceptions
 					if( (new RegExp( '\\b' + app.pickedArray.join('\\b|\\b') + '\\b') ).test(app.griddy[4]) ){
-						app.grabSquare.removeClass('bg_blank');
 						app.grabSquare.addClass('bg_blank');
 					}
 					else{
-						app.grabSquare.removeClass('bg_blank');
 						app.putColour = app.grabSquare.addClass(app.gridList[app.colourRan]);
 					}
 				}, 25 * i);//end settimeout
@@ -155,7 +158,7 @@ app.gridWipe = function(){
 //
 app.gridMessage = function(){
 	app.gridWipe();
-	app.rotateMessage = setInterval (app.gridWipe, 4000);
+	app.rotateMessage = setInterval (app.gridWipe, 10000);
 };
 //	
 app.arr_recorder = [];

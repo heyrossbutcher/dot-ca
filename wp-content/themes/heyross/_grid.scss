@@ -7,7 +7,7 @@
   border-bottom: 1px solid $faintgray;
   position: absolute;
   transition: all 4.5s ease;
-  -moz-transition: all 1.5s ease;
+  -moz-transition: all 4.5s ease;
 }
 .gridRlvr{
   transition: all .25s cubic-bezier(0.250, 0.100, 0.250, 1.000);
@@ -48,5 +48,8 @@
 }
 .bg_blank{
   background: $blank;
+  width: 7px;
+  height: 7px;
+  margin: 2px 0 0 2px;
 }
 //
