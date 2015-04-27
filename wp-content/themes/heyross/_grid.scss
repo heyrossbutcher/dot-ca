@@ -9,6 +9,12 @@
   transition: all 4.5s ease;
   -moz-transition: all 4.5s ease;
 }
+.r1{
+  border-top: 1px solid $faintgray; 
+}
+.c1{
+  border-left: 1px solid $faintgray; 
+}
 .gridRlvr{
   transition: all .25s cubic-bezier(0.250, 0.100, 0.250, 1.000);
   -moz-transition: all .25s cubic-bezier(0.250, 0.100, 0.250, 1.000);

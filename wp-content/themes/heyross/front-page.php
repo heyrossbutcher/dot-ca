@@ -12,7 +12,7 @@ get_header(); ?>
       
       <!-- Get the about section -->
       <section class="about offset" id="about">
-        <div class="wrapper">
+        <div class="wrapper aboutPush">
           <div class="innerWrapper aboutWrapper">
             <div class="title"><h2>About</h2></div>
             <?php //we are going to pull the about stuff ?>
