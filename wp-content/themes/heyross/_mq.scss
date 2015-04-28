@@ -202,9 +202,12 @@
   }
   @media screen 
     and (max-width: 520px) {
+      .call{
+        display: none;
+      }
       .skills {
         font-size: 1.1rem;
-        padding: 12px;
+        padding: 9px 12px;
       }
       nav ul.menu li a {
          font-size: 1.2rem;
@@ -215,13 +218,22 @@
         background-position: -90% 50%;
       }
       .connect_me {
+        margin-top: 25px;
+        width: 40%;
+        max-width: 40%;
+      }
+      .social .social_btns {
+        padding-left: 18px;
+        font-size: 4.5rem;
+      }
+      .connect {
         display: none;
       }
     }
   @media screen 
     and (max-width: 430px) {
       .logo {
-        width: 100%;
+        width: 50%;
         margin-top: 35px;
       }
       .logo h1 a {
@@ -311,7 +323,40 @@
        .thoughts .blog_post:nth-child(2) {
           border-top: 1px solid rgba(0,0,0,0.1);
        }
+       .connect_me {
+         margin-top: 25px;
+         width: 40%;
+         max-width: 40%;
+       }
+       .social .social_btns {
+         padding-left: 12px;
+         font-size: 4.5rem;
+       }
+
     }
+@media screen 
+  and (max-width: 385px) {
+    .connect_me {
+      display: block;
+      margin-top: 10px;
+      width: 42%;
+      max-width: 42%;
+      float: right;
+      // clear: both;
+    }
+    .social .social_btns {
+      margin-top: 20px;
+      padding-left: 10px;
+      font-size: 3.7rem;
+    }
+    .logo{
+      margin-top: 35px;
+    }
+    .logo h1 a{
+      padding: 10px 20px 10px 15px;
+      margin-left: 0;
+    }
+  }
 @media screen 
   and (max-width: 320px) {
   h2 {
@@ -331,6 +376,7 @@
   nav ul.menu li a {
     padding: 15px 0;
   }
+
 }
  // ----------- Non-Retina Screens ----------- 
 @media screen 
@@ -447,20 +493,36 @@
         top: 40%;
       }
     }
+    @media screen 
+      and (max-width: 520px) {
+        h2.work-title {
+          font-size: 2.5rem!important;
+          margin: 30px 0;
+          padding: 0 15px;
+        }
+        .work-first-box .key-copy {
+          margin-bottom: 20px;
+          padding: 0 15px;
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+        .work-first-box .key-image{
+          padding: 0 15px;
+        }
+    }
+    @media screen 
+      and (max-width: 460px) {
+        .workWrapper{
+          padding: 0;
+        }
+        .navigation .nav-previous a {
+          width: 48%;
+          margin-right: 0;
+        }
+    }
   @media screen 
     and (max-width: 320px) {
-      .workWrapper {
-        padding: 0 0;
-      }
-      .work-first-box .key-copy {
-        margin-bottom: 20px;
-        padding: 0 15px;
-        font-size: 1.3rem;
-        line-height: 2rem;
-      }
-      .work-first-box .key-image{
-        padding: 0 15px;
-      }
+
       .my_post h2 {
         font-size: 2.5rem;
       }
@@ -517,7 +579,7 @@
         padding: 0 20px;
       }
       .my_post .entry-content h2 {
-        font-size: 2.4rem;
+        font-size: 2rem;
       }
       .my_post .entry-content h3 {
         margin: 25px 0 5px 0;

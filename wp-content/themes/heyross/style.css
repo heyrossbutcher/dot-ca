@@ -1001,16 +1001,20 @@ p.form-allowed-tags, .nocomments {
 
 .connect_me {
   float: right;
-  width: 210px;
-  max-width: 210px;
+  width: 220px;
+  max-width: 220px;
   font-size: 1.6rem;
   margin-top: 25px; }
 
 .call {
-  float: left; }
+  float: left;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: 1.3rem;
+  padding: 8px 25px; }
   .call .phone-number {
     margin-left: 6px;
-    color: rgba(0, 0, 0, 0.8); }
+    color: #ffffff; }
 
 .social {
   float: left;
@@ -1019,9 +1023,9 @@ p.form-allowed-tags, .nocomments {
   .social .social_btns {
     float: left;
     text-align: right;
-    max-width: 170px;
+    max-width: 220px;
     padding-left: 12px;
-    font-size: 3.5rem; }
+    font-size: 4rem; }
   .social .connect {
     font-size: 1.6rem;
     margin-top: 15px;
@@ -1039,6 +1043,20 @@ p.form-allowed-tags, .nocomments {
     color: #DAA520; }
     .social .GitHub a:hover {
       color: #778899; }
+
+.connect_mobile {
+  width: 100%;
+  float: left;
+  clear: both; }
+  .connect_mobile .call_mobile {
+    float: left; }
+  .connect_mobile .social_mobile {
+    float: right; }
+    .connect_mobile .social_mobile .social_btns_mobile {
+      float: left;
+      display: inline-block; }
+    .connect_mobile .social_mobile .connect_mobile {
+      float: left; }
 
 .title {
   width: 100%;
@@ -1086,7 +1104,9 @@ header .masthead {
   padding: 0;
   margin-top: 120px;
   position: relative;
-  display: none; }
+  display: none;
+  background-image: url("http://localhost:8888/001Portfolio/wp-content/themes/heyross/img/banner_img.jpg");
+  background-position: 50% 50%; }
 
 .about {
   margin-top: 100px; }
@@ -1443,9 +1463,11 @@ header .masthead {
     padding-left: 20px; } }
 
 @media screen and (max-width: 520px) {
+  .call {
+    display: none; }
   .skills {
     font-size: 1.1rem;
-    padding: 12px; }
+    padding: 9px 12px; }
   nav ul.menu li a {
     font-size: 1.2rem;
     padding: 12px 0; }
@@ -1453,11 +1475,18 @@ header .masthead {
     max-width: 1100px;
     background-position: -90% 50%; }
   .connect_me {
+    margin-top: 25px;
+    width: 40%;
+    max-width: 40%; }
+  .social .social_btns {
+    padding-left: 18px;
+    font-size: 4.5rem; }
+  .connect {
     display: none; } }
 
 @media screen and (max-width: 430px) {
   .logo {
-    width: 100%;
+    width: 50%;
     margin-top: 35px; }
   .logo h1 a {
     width: 100%;
@@ -1519,7 +1548,31 @@ header .masthead {
   .thoughts .blog_post {
     border-top: none; }
   .thoughts .blog_post:nth-child(2) {
-    border-top: 1px solid rgba(0, 0, 0, 0.1); } }
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .connect_me {
+    margin-top: 25px;
+    width: 40%;
+    max-width: 40%; }
+  .social .social_btns {
+    padding-left: 12px;
+    font-size: 4.5rem; } }
+
+@media screen and (max-width: 385px) {
+  .connect_me {
+    display: block;
+    margin-top: 10px;
+    width: 42%;
+    max-width: 42%;
+    float: right; }
+  .social .social_btns {
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 3.7rem; }
+  .logo {
+    margin-top: 35px; }
+  .logo h1 a {
+    padding: 10px 20px 10px 15px;
+    margin-left: 0; } }
 
 @media screen and (max-width: 320px) {
   h2 {
@@ -1599,16 +1652,27 @@ header .masthead {
   .enlarge-image p, .blog-click p {
     top: 40%; } }
 
-@media screen and (max-width: 320px) {
-  .workWrapper {
-    padding: 0 0; }
+@media screen and (max-width: 520px) {
+  h2.work-title {
+    font-size: 2.5rem !important;
+    margin: 30px 0;
+    padding: 0 15px; }
   .work-first-box .key-copy {
     margin-bottom: 20px;
     padding: 0 15px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 2rem; }
   .work-first-box .key-image {
-    padding: 0 15px; }
+    padding: 0 15px; } }
+
+@media screen and (max-width: 460px) {
+  .workWrapper {
+    padding: 0; }
+  .navigation .nav-previous a {
+    width: 48%;
+    margin-right: 0; } }
+
+@media screen and (max-width: 320px) {
   .my_post h2 {
     font-size: 2.5rem; }
   .enlarge-image p, .blog-click p {
@@ -1643,7 +1707,7 @@ header .masthead {
   .my_post .innerWrapper {
     padding: 0 20px; }
   .my_post .entry-content h2 {
-    font-size: 2.4rem; }
+    font-size: 2rem; }
   .my_post .entry-content h3 {
     margin: 25px 0 5px 0; }
   .setImage {

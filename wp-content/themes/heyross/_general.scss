@@ -48,17 +48,21 @@ section{
 }
 .connect_me{
   float: right;
-  width: 210px;
-  max-width: 210px;
+  width: 220px;
+  max-width: 220px;
   font-size: 1.6rem;
   margin-top: 25px;
 }
 .call{
   float: left;
+  background: $black;
+  color: $default;
+  font-size: 1.3rem;
+  padding: 8px 25px;
   // text-transform:  ;
   .phone-number{
     margin-left: 6px;
-    color: $black;
+    color: $default;
     // letter-spacing: 0.5px;
   }
 }
@@ -70,9 +74,9 @@ section{
   .social_btns{
     float: left;
     text-align: right;
-    max-width: 170px;
+    max-width: 220px;
     padding-left: 12px;
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   .connect{
     font-size:1.6rem;
@@ -97,6 +101,24 @@ section{
     color: $burntorange;
     &:hover{
       color: $richgray;
+    }
+  }
+}
+.connect_mobile{
+  width: 100%;
+  float: left;
+  clear: both;
+  .call_mobile{
+    float: left;
+  }
+  .social_mobile{
+    float: right;
+    .social_btns_mobile{
+      float: left;
+      display: inline-block;
+    }
+    .connect_mobile{
+      float: left;
     }
   }
 }
@@ -152,6 +174,8 @@ header{
   margin-top: 120px;
   position: relative;
   display: none;
+  background-image: url("http://localhost:8888/001Portfolio/wp-content/themes/heyross/img/banner_img.jpg");
+  background-position: 50% 50%;
 }
 
 ///ABOUT//////////////////////////

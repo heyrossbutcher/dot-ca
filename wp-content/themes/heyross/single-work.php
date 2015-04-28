@@ -25,7 +25,7 @@ get_header(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                   <?php $projName = get_field('project_name'); ?>
                   <?php if($projName) : ?>
-                  <h2 class="entry-title"><span class="client_name"><?php the_field('client');  //Get the Client Name ?> - </span><span class="project_name"><?php the_field('project_name');  //Get the Project Name ?></span></h2>
+                  <h2 class="entry-title work-title"><span class="client_name"><?php the_field('client');  //Get the Client Name ?> - </span><span class="project_name"><?php the_field('project_name');  //Get the Project Name ?></span></h2>
                   <?php else :?>
                       <h2 class="entry-title"><span class="client_name"><?php the_field('client');  //Get the Client Name ?></span></h2>
                   <?php endif ?>

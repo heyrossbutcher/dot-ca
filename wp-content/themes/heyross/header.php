@@ -38,17 +38,17 @@
           <?php endif ?>
         </h1>
       </div>
+      <?php $latestPosts = new wp_query(array(
+        'post_type' => 'social',//Get the Social posts
+        'posts_per_page' => -1
+      )) ?>
       <div class="connect_me">
-        <div class="call">
+        <!-- <div class="call">
           Reach me at <span class="phone-number">647.668.6850</span>
-        </div>
+        </div> -->
           <!-- Get the social icons -->
         <div class="social">
 
-          <?php $latestPosts = new wp_query(array(
-            'post_type' => 'social',//Get the Social posts
-            'posts_per_page' => -1
-          )) ?>
           <div class="social_btns connect">Connect at</div>
           <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
             
@@ -60,8 +60,6 @@
             
           <?php endwhile; ?><!-- //end custom loop -->
           <!-- <div class="call">CALL 647.668.6850</div> -->
-
-
         </div><!-- End of Social -->
       </div><!-- End of connect me -->
     </div><!-- End of container -->
