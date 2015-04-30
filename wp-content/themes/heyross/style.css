@@ -709,6 +709,61 @@ ol .children {
   height: 7px;
   margin: 2px 0 0 2px; }
 
+.instruct {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 1100px;
+  height: 40px;
+  z-index: 10;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  -webkit-transition: all 1.25s ease;
+          transition: all 1.25s ease;
+  -moz-transition: all 1.25s ease; }
+
+.show {
+  opacity: 1; }
+
+.draw_btn {
+  width: 1100px;
+  height: 300px;
+  position: absolute;
+  z-index: 5000;
+  background: transparent;
+  -webkit-transition: all 0.75s ease;
+          transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease; }
+
+.controls {
+  width: 450px;
+  margin: 0 auto; }
+
+.key_btns {
+  float: left;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 12px 40px 0 0;
+  font-size: 1.25rem; }
+
+.key_btns:last-child {
+  float: left;
+  padding: 12px 0 0 0; }
+
+.letter_border {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 3px 0 3px; }
+
+.reset {
+  padding: 3px 6px; }
+  .reset:hover {
+    color: rgba(0, 0, 0, 0.8);
+    background: #ffffff;
+    cursor: pointer; }
+
 /* =============================================================================
                    Default Styling
    ========================================================================== */

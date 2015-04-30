@@ -124,7 +124,7 @@ app.gridPattern = [
 	
 ];
 //
-app.mes_ctr = 0;
+app.mes_ctr = 2;
 //
 app.gridWipe = function(){
 	app.mes_pattern = app.gridPattern[app.mes_ctr];
@@ -160,12 +160,21 @@ app.gridWipe = function(){
 			}(i,n));//End closure
 		};
 	};
+	
 	app.mes_ctr++;
 	console.log('Give me the next number: ' + app.mes_ctr);
 	//
-	if ( app.mes_ctr >= 4 ) {
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		app.mess_thres = 3;
+	} else {
+		app.mess_thres = 4;
+	}
+	//
+	if ( app.mes_ctr >= app.mess_thres ) {
 		console.log('CLEAR INTERVAL!!!!!!');
 		clearInterval(app.rotateMessage);
+		//
+		$('.draw_btn').removeClass('hide');
 	}
 };
 //
@@ -186,8 +195,16 @@ app.mouseEvent = function(){
 		console.log(app.arr_grabber)
 		app.arr_recorder.push(app.arr_grabber);
 		console.log(app.arr_recorder);
-		
 	});
+	//
+	$('.draw_btn').on('mouseover', function(){
+		$(this).addClass('hide');
+		console.log('Hide the button!');
+		$('.instruct').addClass('show');
+		console.log('Show instructions!');
+		app.gridWipe();
+	});
+	
 };
 //
 //////////////////
@@ -207,4 +224,5 @@ $(function() {
 	app.makeGrid();
 	app.init();
 	FastClick.attach(document.body);
+	
 });

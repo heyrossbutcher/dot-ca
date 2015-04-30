@@ -65,13 +65,20 @@
     </div><!-- End of container -->
     
     <!-- Check if Front-page or inner page -->
-    <div class="wrapper">
+    <div class="wrapper" id="jumbotron">
       <?php if(is_front_page()) : ?>
-        <div class="jumbotron_static">
-          <p>hello</p>
-        </div>
-        <div class="jumbotron" id="jumbotron">
-          <!-- <img src="<?php bloginfo( 'template_url' ); ?>/img/jumbotron.jpg" alt=""> -->
+        <div class="jumbotron_static"> </div>
+        
+        <div class="jumbotron">
+            <div class="instruct">
+              <div class="controls">
+                <div class="draw key_btns">Press <span class="letter_border">D</span> to draw</div>
+                <div class="erase key_btns">Press <span class="letter_border">E</span> to erase</div>
+                <div class="refine key_btns">Press <span class="letter_border">C</span> to refine</div>
+                <div class="refine key_btns"><span class="letter_border reset">Reset</span></div>
+              </div>
+            </div>
+            <div class="draw_btn hide"></div>
         </div>
         <nav class="top_nav clearfix">
           <div class="main_nav">
