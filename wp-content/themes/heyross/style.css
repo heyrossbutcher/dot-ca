@@ -656,9 +656,9 @@ ol .children {
   border-right: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
   position: absolute;
-  -webkit-transition: all 4.5s ease;
-          transition: all 4.5s ease;
-  -moz-transition: all 4.5s ease; }
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease; }
 
 .r1 {
   border-top: 1px solid #e7e7e7; }
@@ -711,57 +711,76 @@ ol .children {
 
 .instruct {
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  width: 1100px;
+  max-width: 100%;
+  width: 100%;
   height: 40px;
   z-index: 10;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   opacity: 0;
-  -webkit-transition: all 1.25s ease;
-          transition: all 1.25s ease;
-  -moz-transition: all 1.25s ease; }
+  -webkit-transition: all 0.75s ease;
+          transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease; }
 
 .show {
   opacity: 1; }
 
 .draw_btn {
-  width: 1100px;
+  max-width: 100%;
+  width: 100%;
   height: 300px;
   position: absolute;
   z-index: 5000;
   background: transparent;
+  cursor: pointer;
   -webkit-transition: all 0.75s ease;
           transition: all 0.75s ease;
   -moz-transition: all 0.75s ease; }
 
 .controls {
-  width: 450px;
-  margin: 0 auto; }
+  width: 500px;
+  margin: 0 auto;
+  -webkit-transition: all 0.75s ease;
+          transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease; }
 
 .key_btns {
   float: left;
-  color: rgba(0, 0, 0, 0.8);
-  padding: 12px 40px 0 0;
+  padding: 10px 20px 0 0;
   font-size: 1.25rem; }
 
 .key_btns:last-child {
   float: left;
-  padding: 12px 0 0 0; }
+  padding: 10px 0 0 0; }
 
 .letter_border {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0 3px 0 3px; }
+  border-radius: 3px;
+  background: #ffffff;
+  padding: 2px 3px 3px 3px;
+  margin-top: -3px; }
+  .letter_border .inner_border {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 3px;
+    border-radius: 1px; }
 
 .reset {
-  padding: 3px 6px; }
+  color: rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  margin-top: 200px;
+  padding: 2px 6px;
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease; }
   .reset:hover {
-    color: rgba(0, 0, 0, 0.8);
-    background: #ffffff;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer; }
 
 /* =============================================================================
@@ -1389,75 +1408,127 @@ header .masthead {
 
 @media screen and (max-width: 1060px) {
   .jumbotron {
-    margin-left: -20px; } }
+    margin-left: -20px; }
+    .jumbotron .c107, .jumbotron .c108, .jumbotron .c109, .jumbotron .c110 {
+      display: none; }
+  .controls {
+    margin-right: 240px; } }
 
 @media screen and (max-width: 1040px) {
   .jumbotron {
-    margin-left: -30px; } }
+    margin-left: -30px; }
+    .jumbotron .c106 {
+      display: none; } }
 
 @media screen and (max-width: 1020px) {
   .jumbotron {
-    margin-left: -40px; } }
+    margin-left: -40px; }
+  .controls {
+    margin-right: 220px; } }
 
 @media screen and (max-width: 1000px) {
   .jumbotron {
-    margin-left: -50px; } }
+    margin-left: -50px; }
+    .jumbotron .c104, .jumbotron .c105 {
+      display: none; }
+  .controls {
+    margin-right: 210px; } }
 
 @media screen and (max-width: 980px) {
   .jumbotron {
-    margin-left: -60px; } }
+    margin-left: -60px; }
+  .controls {
+    margin-right: 200px; } }
 
 @media screen and (max-width: 960px) {
   .jumbotron {
-    margin-left: -70px; } }
+    margin-left: -70px; }
+    .jumbotron .c102, .jumbotron .c103 {
+      display: none; }
+  .controls {
+    margin-right: 190px; } }
 
 @media screen and (max-width: 940px) {
   .jumbotron {
-    margin-left: -80px; } }
+    margin-left: -80px; }
+  .controls {
+    margin-right: 160px; } }
 
 @media screen and (max-width: 900px) {
   .jumbotron {
-    margin-left: -90px; } }
+    margin-left: -90px; }
+    .jumbotron .c98, .jumbotron .c99, .jumbotron .c100, .jumbotron .c101 {
+      display: none; }
+  .controls {
+    margin-right: 140px; } }
 
 @media screen and (max-width: 860px) {
   .jumbotron {
-    margin-left: -110px; } }
+    margin-left: -110px; }
+    .jumbotron .c96, .jumbotron .c97 {
+      display: none; }
+  .controls {
+    margin-right: 120px; } }
 
 @media screen and (max-width: 820px) {
   .jumbotron {
-    margin-left: -140px; } }
+    margin-left: -140px; }
+  .controls {
+    margin-right: 100px; } }
 
 @media screen and (max-width: 800px) {
   .jumbotron {
-    margin-left: -140px; } }
+    margin-left: -140px; }
+  .controls {
+    margin-right: 90px; } }
 
 @media screen and (max-width: 780px) {
   .jumbotron {
-    margin-left: -160px; } }
+    margin-left: -160px; }
+    .jumbotron .c93, .jumbotron .c94, .jumbotron .c95 {
+      display: none; }
+  .controls {
+    margin-right: 80px; } }
 
 @media screen and (max-width: 740px) {
   .jumbotron {
-    margin-left: -170px; } }
+    margin-left: -170px; }
+    .jumbotron .c89, .jumbotron .c90, .jumbotron .c91, .jumbotron .c92 {
+      display: none; }
+  .controls {
+    margin-right: 70px; } }
 
 @media screen and (max-width: 720px) {
   .jumbotron {
-    margin-left: -180px; } }
+    margin-left: -180px; }
+  .controls {
+    margin-right: 60px; } }
 
 @media screen and (max-width: 700px) {
   .jumbotron {
-    margin-left: -190px; } }
+    margin-left: -190px; }
+  .controls {
+    margin-right: 50px; } }
 
 @media screen and (max-width: 680px) {
   .jumbotron {
-    margin-left: -210px; } }
+    margin-left: -210px; }
+  .controls {
+    margin-right: 40px; } }
 
 @media screen and (max-width: 660px) {
   .jumbotron {
-    margin-left: -220px; } }
+    margin-left: -220px; }
+  .controls {
+    margin-right: 30px; } }
 
 @media screen and (max-width: 640px) {
   .jumbotron {
-    margin-left: -230px; } }
+    margin-left: -230px; }
+    .jumbotron .c87, .jumbotron .c88 {
+      display: none; }
+  .controls {
+    margin-right: 20px; } }
 
 @media screen and (max-width: 950px) {
   .about, .work, .thoughts, .contact, .thanks {
