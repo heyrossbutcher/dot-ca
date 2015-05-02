@@ -75,11 +75,28 @@ wp_deregister_script('jquery');
     null, // version number
     true //load in footer
   );
+  if(is_home()) {
+	  wp_enqueue_script(
+	    'patterns', //handle
+	    get_template_directory_uri() . '/js/patterns.js', //source
+	    false, //dependencies
+	    null, // version number
+	    true //load in footer
+	  );
+
+	  wp_enqueue_script(
+	    'grid', //handle
+	    get_template_directory_uri() . '/js/grid.js', //source
+	    false, //dependencies
+	    null, // version number
+	    true //load in footer
+	  );
+	}
 
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/scripts.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'plugins', 'patterns', 'grid' ), //dependencies
     null, // version number
     true //load in footer
   );

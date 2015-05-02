@@ -27,7 +27,7 @@
                 </div><!-- #nav-below -->
 
               </div><!-- ///////////End out of INNER WRAPPER/////////// -->
-              <div class="innerWrapper">
+              <div class="replyWrapper">
                 <?php $comments = comments_template( '', false ); ?>
                 <?php $comments; ?>
               </div><!-- ///////////End out of COMMENT WRAPPER/////////// -->

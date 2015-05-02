@@ -302,8 +302,8 @@
       }
       .connect_me {
         margin-top: 25px;
-        width: 40%;
-        max-width: 40%;
+        width: 43%;
+        max-width: 43%;
       }
       .social .social_btns {
         padding-left: 18px;
@@ -408,8 +408,8 @@
        }
        .connect_me {
          margin-top: 25px;
-         width: 40%;
-         max-width: 40%;
+         width: 43%;
+         max-width: 43%;
        }
        .social .social_btns {
          padding-left: 12px;
@@ -510,6 +510,17 @@
       width: 46%;
     }
   }
+@media screen 
+  and (max-width: 950px) {
+    .work-first-box .key-copy {
+      font-size: 1.5rem;
+      width: 46%;
+    }
+  .work-first-box .key-copy .link a {
+    font-size: 1.2rem;
+    padding: 6px 9px;
+  }
+}
   //
   @media screen 
     and (max-width: 800px) {
@@ -590,7 +601,7 @@
           line-height: 2rem;
         }
         .work-first-box .key-image{
-          padding: 0 15px;
+          padding: 0;
         }
     }
     @media screen 
@@ -599,7 +610,7 @@
           padding: 0;
         }
         .navigation .nav-previous a {
-          width: 48%;
+          // width: 48%;
           margin-right: 0;
         }
     }
@@ -630,6 +641,7 @@
       ol .children {
         -webkit-padding-start: 25px;
       }
+
 }
 @media screen 
     and (max-width: 620px) {
@@ -644,7 +656,7 @@
     and (max-width: 540px) {
       .my_post .entry-content p {
         font-size: 1.8rem;
-        line-height: 2.4rem;
+        line-height: 3rem;
       }
       .my_post h2 {
         font-size: 1.8rem;
@@ -659,7 +671,7 @@
 @media screen 
     and (max-width: 430px) {
       .my_post .innerWrapper{
-        padding: 0 20px;
+        padding: 0 15px;
       }
       .my_post .entry-content h2 {
         font-size: 2rem;
@@ -672,10 +684,15 @@
       }
       .my_post .entry-content p {
         font-size: 1.6rem;
+        line-height: 3rem;
       }
       ol .children {
         -webkit-padding-start: 15px;
       }
+      .replyWrapper{
+        padding: 0 10px;
+      }
+
 }
 @media screen 
     and (max-width: 320px) {
@@ -702,8 +719,8 @@
         font-size: 1.2rem;
       }
       .navigation .nav-previous a {
-        width: 130px;
-        line-height: 1.8rem;
+        max-width: 130px;
+        // line-height: 1.8rem;
       }
       .my_post .entry-content blockquote {
         line-height: 2.4rem;
@@ -714,4 +731,5 @@
       #respond textarea {
         height: 100px;
       }
+
 }

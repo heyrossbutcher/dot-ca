@@ -42,7 +42,8 @@ get_header(); ?>
                       </a> 
                     </div>
                     <div class="key-copy">
-                      <?php the_field('large_writeup');  //Get the large write-up ?>
+                      <p><?php the_field('large_writeup');  //Get the large write-up ?></p>
+                      <p class="link"><a href="<?php the_field('key_image_link'); ?>" target="_">Click to view</a></p>
                     </div>
                   </div>
                   
@@ -94,6 +95,7 @@ get_header(); ?>
                         <?php if($subText) : ?>
                         <div class="secondary-copy">
                               <p><?php the_sub_field('text_series'); ?></p>
+                              <p class="sec-link"><a href="<?php echo $subImage[url]; ?>" target="_">Click to view</a></p>
                         </div>
                            <?php else :?>
                                <p></p>

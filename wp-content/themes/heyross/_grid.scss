@@ -18,9 +18,9 @@
 .gridRlvr{
   transition: all .25s cubic-bezier(0.250, 0.100, 0.250, 1.000);
   -moz-transition: all .25s cubic-bezier(0.250, 0.100, 0.250, 1.000);
-  &:hover{
-    background: $default;
-  }
+  // &:hover{
+  //   background: $default;
+  // }
 }
 .bg_one{
   background: $maroon;

@@ -31,13 +31,29 @@
 	}
 	.key-copy{
 		font-family: $display-font;
-		font-size: 2rem;
-		line-height: 3rem;
+		font-size: 1.6rem;
+		line-height: 1.4rem;
 		margin: 0;
 		padding: 0;
 		float: left;
 		width: 36%;
 		max-width: 400px;
+		.link{
+			margin-top: 10px;
+			a{
+				font-size: 1.4rem;
+				letter-spacing: 1px;
+				background: $black;
+				margin: 0;
+				padding: 8px 12px;
+				color: $default;
+				text-decoration: none;
+				transition: all 0.25s ease-in;
+				&:hover{
+				  background: $lightgray;
+				}
+			}
+		}
 	}
 }
 .work-extra-box{
@@ -58,6 +74,18 @@
 		width: 36%;
 		max-width: 400px;
 		background: rgba(0,0,0,0.05);
+		.sec-link{
+			margin-top: 10px;
+			a{
+				font-weight: 400;
+				color: $black;
+				text-decoration: none;
+				&:hover{
+					padding-bottom: 2px;
+					border-bottom: 1px solid $black;
+				}
+			}
+		}
 	}
 }
 .work-image{

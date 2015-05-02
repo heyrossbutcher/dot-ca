@@ -554,13 +554,27 @@ ol .children {
     float: left; }
 .work-first-box .key-copy {
   font-family: 'Merriweather', serif;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
   margin: 0;
   padding: 0;
   float: left;
   width: 36%;
   max-width: 400px; }
+  .work-first-box .key-copy .link {
+    margin-top: 10px; }
+    .work-first-box .key-copy .link a {
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 0;
+      padding: 8px 12px;
+      color: #ffffff;
+      text-decoration: none;
+      -webkit-transition: all 0.25s ease-in;
+              transition: all 0.25s ease-in; }
+      .work-first-box .key-copy .link a:hover {
+        background: #808080; }
 
 .work-extra-box .secondary-image {
   width: 60%;
@@ -577,6 +591,15 @@ ol .children {
   width: 36%;
   max-width: 400px;
   background: rgba(0, 0, 0, 0.05); }
+  .work-extra-box .secondary-copy .sec-link {
+    margin-top: 10px; }
+    .work-extra-box .secondary-copy .sec-link a {
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.8);
+      text-decoration: none; }
+      .work-extra-box .secondary-copy .sec-link a:hover {
+        padding-bottom: 2px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
 
 .enlarge-image, .blog-click {
   opacity: 0;
@@ -670,8 +693,6 @@ ol .children {
   -webkit-transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1);
           transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1);
   -moz-transition: all .25s cubic-bezier(0.25, 0.1, 0.25, 1); }
-  .gridRlvr:hover {
-    background: #ffffff; }
 
 .bg_one {
   background: #A11E0B; }
@@ -1602,8 +1623,8 @@ header .masthead {
     background-position: -90% 50%; }
   .connect_me {
     margin-top: 25px;
-    width: 40%;
-    max-width: 40%; }
+    width: 43%;
+    max-width: 43%; }
   .social .social_btns {
     padding-left: 18px;
     font-size: 4.5rem; }
@@ -1677,8 +1698,8 @@ header .masthead {
     border-top: 1px solid rgba(0, 0, 0, 0.1); }
   .connect_me {
     margin-top: 25px;
-    width: 40%;
-    max-width: 40%; }
+    width: 43%;
+    max-width: 43%; }
   .social .social_btns {
     padding-left: 12px;
     font-size: 4.5rem; } }
@@ -1729,6 +1750,14 @@ header .masthead {
     width: 50%; }
   .work-extra-box .secondary-copy {
     width: 46%; } }
+
+@media screen and (max-width: 950px) {
+  .work-first-box .key-copy {
+    font-size: 1.5rem;
+    width: 46%; }
+  .work-first-box .key-copy .link a {
+    font-size: 1.2rem;
+    padding: 6px 9px; } }
 
 @media screen and (max-width: 800px) {
   .work-first-box .key-image {
@@ -1789,13 +1818,12 @@ header .masthead {
     font-size: 1.4rem;
     line-height: 2rem; }
   .work-first-box .key-image {
-    padding: 0 15px; } }
+    padding: 0; } }
 
 @media screen and (max-width: 460px) {
   .workWrapper {
     padding: 0; }
   .navigation .nav-previous a {
-    width: 48%;
     margin-right: 0; } }
 
 @media screen and (max-width: 320px) {
@@ -1821,7 +1849,7 @@ header .masthead {
 @media screen and (max-width: 540px) {
   .my_post .entry-content p {
     font-size: 1.8rem;
-    line-height: 2.4rem; }
+    line-height: 3rem; }
   .my_post h2 {
     font-size: 1.8rem; }
   .comments-area h2 {
@@ -1831,7 +1859,7 @@ header .masthead {
 
 @media screen and (max-width: 430px) {
   .my_post .innerWrapper {
-    padding: 0 20px; }
+    padding: 0 15px; }
   .my_post .entry-content h2 {
     font-size: 2rem; }
   .my_post .entry-content h3 {
@@ -1839,9 +1867,12 @@ header .masthead {
   .setImage {
     margin-bottom: 25px; }
   .my_post .entry-content p {
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    line-height: 3rem; }
   ol .children {
-    -webkit-padding-start: 15px; } }
+    -webkit-padding-start: 15px; }
+  .replyWrapper {
+    padding: 0 10px; } }
 
 @media screen and (max-width: 320px) {
   .my_post .innerWrapper {
@@ -1860,8 +1891,7 @@ header .masthead {
   .comments-title {
     font-size: 1.2rem; }
   .navigation .nav-previous a {
-    width: 130px;
-    line-height: 1.8rem; }
+    max-width: 130px; }
   .my_post .entry-content blockquote {
     line-height: 2.4rem; }
   ol .children {
