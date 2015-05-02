@@ -72,9 +72,9 @@
         <div class="jumbotron">
             <div class="instruct">
               <div class="controls">
-                <div class="draw key_btns">Tap <span class="letter_border"><span class="inner_border">D</span></span> and draw</div>
-                <div class="erase key_btns">Tap <span class="letter_border"><span class="inner_border">E</span></span> and erase</div>
-                <div class="refine key_btns">Tap <span class="letter_border"><span class="inner_border">C</span></span> and click to refine</div>
+                <div class="draw key_btns">Tap <span class="letter_border d"><span class="inner_border">D</span></span> and draw</div>
+                <div class="erase key_btns">Tap <span class="letter_border e"><span class="inner_border">E</span></span> and erase</div>
+                <div class="refine key_btns">Tap <span class="letter_border c"><span class="inner_border">C</span></span> and click to refine</div>
                 <div class="refine key_btns"><span class="letter_border reset">Clear</span></div>
               </div>
             </div>

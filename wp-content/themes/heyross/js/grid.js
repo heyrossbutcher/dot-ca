@@ -37,6 +37,18 @@ app.makeGrid = function(){
 // GRID TRANSITION
 //////////////////
 //
+app.getClassnames = function(){
+	app.griddy = app.grabSquare[0].className.split(' ');//
+	app.arr = [];
+	app.arr = app.griddy;
+	app.grabSquare.removeClass(app.arr[5]);
+}
+//
+app.randCol = function(){
+	app.colourRan = Math.floor(Math.random()*app.gridList.length);//Get the random colour
+	return app.colourRan;
+}
+//
 app.mes_ctr = 2;
 //MAKE THE GRID CHANGE
 app.gridWipe = function(message){
@@ -44,7 +56,7 @@ app.gridWipe = function(message){
 	//
 	var i = 0;
 	// 
-	app.colourRan = Math.floor(Math.random()*app.gridList.length);//Get the random colour
+	app.colourRan = app.randCol();//Get the random colour
 	//
 	for (var n = 1; n <= 30; n++) {//run through the rows
 		//
@@ -56,10 +68,7 @@ app.gridWipe = function(message){
 					app.grabSquare = $('.c' + i + '.r' + n);//get the divs class name
 					//
 					//Create the array to check for the overall div number
-					app.griddy = app.grabSquare[0].className.split(' ');//
-					app.arr = [];
-					app.arr = app.griddy;
-					app.grabSquare.removeClass(app.arr[5]);
+					app.getClassnames();
 					//
 					//Check the div class against the arrays to find the exceptions
 					if( (new RegExp( '\\b' + app.mes_pattern.join('\\b|\\b') + '\\b') ).test(app.griddy[4]) ){
@@ -106,14 +115,10 @@ app.gridMessage = function(){
 //////////////////
 //CLEAR ALL BG_BLANK CLASS
 app.gridReset = function(){
-	app.colourRan = Math.floor(Math.random()*app.gridList.length);//Get the random colour
+	app.colourRan = app.randCol();//Get the random colour
 	for(var w = 0; w <= 3299; w++){
 		app.grabSquare = $('.n' + w);
-		app.griddy = app.grabSquare[0].className.split(' ');//
-		app.arr = [];
-		app.arr = app.griddy;
-		app.grabSquare.removeClass(app.arr[5]);
-		// console.log(grabSquare + '?????????????????');
+		app.getClassnames();
 		app.bgcol_holder = app.gridList[app.colourRan];
 		app.grabSquare.addClass(app.bgcol_holder);
 	}
@@ -160,9 +165,6 @@ app.whiteOff = function(){
 app.draw = function(grid){
 	app.gridder = grid;
 	app.griddy = app.gridder[0].className.split(' ');
-	app.griddyNum = app.griddy[4];
-	console.log(app.griddyNum);
-	//
 	app.griddyCounter = app.griddy[5];
 	if (app.griddyCounter === 'bg_blank'){
 		app.whiteOff();
