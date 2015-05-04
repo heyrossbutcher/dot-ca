@@ -49,7 +49,7 @@ app.randCol = function(){
 	return app.colourRan;
 }
 //
-app.mes_ctr = 2;
+app.mes_ctr = 0;
 //MAKE THE GRID CHANGE
 app.gridWipe = function(message){
 	app.mes_pattern = app.gridPattern[message];
@@ -75,8 +75,8 @@ app.gridWipe = function(message){
 						app.grabSquare.addClass('bg_blank');
 					}
 					else{
-						app.putColour = app.grabSquare.addClass(app.gridList[app.colourRan]);
-						console.log('COLOUR: ' + app.gridList[app.colourRan]);
+						app.putColour = app.grabSquare.addClass(app.gridList[app.mes_ctr]);
+						console.log('COLOUR: ' + app.mes_ctr);
 					}
 				}, 25 * i);//end settimeout
 			}(i,n));//End closure
@@ -89,9 +89,9 @@ app.gridRefresh = function(){
 	app.mes_ctr++;
 	//
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		app.mess_thres = 3;
-	} else {
 		app.mess_thres = 4;
+	} else {
+		app.mess_thres = 5;
 	}
 	//
 	if ( app.mes_ctr >= app.mess_thres ) {
@@ -100,6 +100,7 @@ app.gridRefresh = function(){
 		//
 		app.delayDraw = setTimeout(function () { 
 			$('.draw_btn').removeClass('hide');
+			$('.click_label').removeClass('hide');
 			app.keying();
 		}, 3500);
 		
@@ -108,7 +109,7 @@ app.gridRefresh = function(){
 //CALL THE GRID WIPE SEQUENCE
 app.gridMessage = function(){
 	app.gridRefresh();
-	app.rotateMessage = setInterval (app.gridRefresh, 6500);
+	app.rotateMessage = setInterval (app.gridRefresh, 3000);
 };
 //////////////////
 //DRAW ON THE GRID
@@ -139,7 +140,7 @@ app.keying = function(){
       } else if(e.which==69){
 	      	app.brush = 'erase';
 	      	console.log('Pressed E:' + app.brush);
-	      } else if (e.which==67){
+	      } else if (e.which==82){
 	      	app.brush = 'refine';
 	      	console.log('Pressed C:' + app.brush);
       }

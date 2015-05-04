@@ -26,31 +26,19 @@
   background: $maroon;
 }
 .bg_two{
-  background: $burntorange;
+  background: $purple;
 }
 .bg_three{
-  background: $richgray;
+  background: $pink;
 }
 .bg_four{
-  background: $cherry;
+  background: $lightorange;
 }
 .bg_five{
-  background: $darkgray;
+  background: $red;
 }
 .bg_six{
   background: $lightblue;
-}
-.bg_seven{
-  background: $lightorange;
-}
-.bg_eight{
-  background: $deepblue;
-}
-.bg_nine{
-  background: $mediumblue;
-}
-.bg_ten{
-  background: $pink;
 }
 .bg_blank{
   background: $blank;
@@ -61,7 +49,7 @@
 //
 .instruct{
   position: absolute;
-  background: $black;
+  background: rgba($black, 0.65);
   color: $default;
   border-bottom: 1px solid $borderCtwo;
   border-top: 1px solid $borderCtwo;
@@ -86,6 +74,23 @@
   z-index: 5000;
   background: $invisible;
   cursor: pointer;
+  //
+  transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+}
+//
+.click_label{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  z-index: 11;
+  background: $default;
+  color: $lightblue;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding:9px 13px;
+  //
+  transform: translateX(-50%);
   //
   transition: all 0.75s ease;
   -moz-transition: all 0.75s ease;

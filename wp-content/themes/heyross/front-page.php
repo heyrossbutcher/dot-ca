@@ -197,7 +197,7 @@ get_header(); ?>
               )) ?> 
               <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
                 <!-- <h3><?php the_field('subhead');  //Get the subhead ?></h3> -->
-                <p><?php the_field('copy_block');  //Get the copy block ?></p>
+                <p class="all_the_best"><?php the_field('copy_block');  //Get the copy block ?></p>
               <?php endwhile; // end of the loop. ?>
               <?php wp_reset_postdata(); ?>
             <?php //End of Thanks ?>

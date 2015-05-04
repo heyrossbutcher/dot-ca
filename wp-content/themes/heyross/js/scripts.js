@@ -4,6 +4,14 @@
 //NAV
 //////////////////
 app.scroll_checker = function(){
+	app.wid = $( window ).width();
+	if (app.wid <= 620){
+		app.hdr = 195;
+		// console.log('195!!!!!!!!!!!!!!');
+	} else {
+		app.hdr = 320;
+		// console.log('320!!!!!!!!!!!!!!');
+	}
 	if( $(window).scrollTop() > app.hdr ) {
 	  app.mn.addClass(app.mns);
 	  app.cn.addClass(app.cnp);
@@ -17,7 +25,9 @@ app.mn = $('.top_nav');
 app.mns = 'main-nav-scrolled';
 app.cn = $('.content');
 app.cnp = 'push';
-app.hdr = 325;
+
+
+
 //
 $(window).scroll(function() {
   app.scroll_checker();
@@ -94,6 +104,7 @@ app.startDrawing = function(){
 app.mouseEvent = function(){
 	$('.draw_btn').on('click', function(){
 		$(this).addClass('hide');
+		$('.click_label').addClass('hide');
 		// console.log('Hide the button!');
 		$('.instruct').addClass('show');
 		// console.log('Show instructions!');

@@ -16,6 +16,9 @@
     .controls{
       margin-right: 240px;
     }
+    .click_label{
+      transform: translateX(-40%);
+    }
 }
 @media screen 
   and (max-width: 1040px) {
@@ -24,10 +27,13 @@
       .c106{
         display: none;
       }
+    .click_label{
+      transform: translateX(-30%);
     }
     // .controls{
     //   margin-right: 260px;
     // }
+  }
 }
 @media screen 
   and (max-width: 1020px) {
@@ -44,6 +50,9 @@
       margin-left: -50px;
       .c104,.c105{
         display: none;
+      }
+      .click_label{
+        transform: translateX(-20%);
       }
     }
     .controls{
@@ -66,10 +75,14 @@
       .c102,.c103{
         display: none;
       }
+      .click_label{
+        transform: translateX(0%);
+      }
     }
     .controls{
       margin-right: 190px;
     }
+    
 }
 @media screen 
   and (max-width: 940px) {
@@ -78,6 +91,9 @@
     }
     .controls{
       margin-right: 160px;
+    }
+    .click_label{
+      transform: translateX(200%);
     }
 }
 @media screen 
@@ -109,7 +125,9 @@
   and (max-width: 820px) {
     .jumbotron{
       margin-left: -140px;
-      
+      .click_label{
+        transform: translateX(20%);
+      }
     }
     .controls{
       margin-right: 100px;
@@ -143,6 +161,9 @@
       margin-left: -170px;
       .c89,.c90,.c91,.c92{
         display: none;
+      }
+      .click_label{
+        transform: translateX(40%);
       }
     }
     .controls{
@@ -180,6 +201,9 @@
   and (max-width: 660px) {
     .jumbotron{
       margin-left: -220px;
+      .click_label{
+        transform: translateX(50%);
+      }
     }
     .controls{
       margin-right: 30px;
@@ -191,6 +215,9 @@
       margin-left: -230px;
       .c87, .c88{
         display: none;
+      }
+      .click_label{
+        transform: translateX(60%);
       }
     }
     .controls{

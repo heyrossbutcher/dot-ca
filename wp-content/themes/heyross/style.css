@@ -698,31 +698,19 @@ ol .children {
   background: #A11E0B; }
 
 .bg_two {
-  background: #DAA520; }
+  background: #9B59B6; }
 
 .bg_three {
-  background: #778899; }
+  background: #ED1E79; }
 
 .bg_four {
-  background: #9E0050; }
+  background: #FF7A00; }
 
 .bg_five {
-  background: #515151; }
+  background: #EE4846; }
 
 .bg_six {
   background: #00B0F9; }
-
-.bg_seven {
-  background: #FF7A00; }
-
-.bg_eight {
-  background: #312A68; }
-
-.bg_nine {
-  background: #005487; }
-
-.bg_ten {
-  background: #ED1E79; }
 
 .bg_blank {
   background: transparent;
@@ -732,7 +720,7 @@ ol .children {
 
 .instruct {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.65);
   color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -757,6 +745,23 @@ ol .children {
   z-index: 5000;
   background: transparent;
   cursor: pointer;
+  -webkit-transition: all 0.75s ease;
+          transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease; }
+
+.click_label {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  z-index: 11;
+  background: #ffffff;
+  color: #00B0F9;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 9px 13px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 0.75s ease;
           transition: all 0.75s ease;
   -moz-transition: all 0.75s ease; }
@@ -1193,15 +1198,16 @@ header .masthead {
 
 .jumbotron_static {
   max-width: 1100px;
-  height: 300px;
+  height: 200px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
   padding: 0;
   margin-top: 120px;
   position: relative;
   display: none;
-  background-image: url("http://localhost:8888/001Portfolio/wp-content/themes/heyross/img/banner_img.jpg");
-  background-position: 50% 50%; }
+  background-image: url("http://localhost:8888/001Portfolio/wp-content/themes/heyross/img/banner_img.png");
+  background-position: 50% 50%;
+  background-size: cover; }
 
 .about {
   margin-top: 100px; }
@@ -1369,8 +1375,18 @@ header .masthead {
 
 .contact {
   margin-top: 100px; }
+  .contact a {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
+    .contact a:hover {
+      border-bottom: 1px solid #808080;
+      color: #808080;
+      text-decoration: none; }
   .contact .intro {
-    margin-bottom: 20px; }
+    margin: 20px 0; }
   .contact .wpcf7-form {
     width: 100%; }
     .contact .wpcf7-form input {
@@ -1418,6 +1434,9 @@ header .masthead {
 .thanks {
   margin-top: 100px;
   margin-bottom: 100px; }
+  .thanks .all_the_best {
+    font-size: 2rem;
+    text-align: center; }
   .thanks h2 {
     margin-bottom: 35px; }
   .thanks h3 {
@@ -1433,13 +1452,21 @@ header .masthead {
     .jumbotron .c107, .jumbotron .c108, .jumbotron .c109, .jumbotron .c110 {
       display: none; }
   .controls {
-    margin-right: 240px; } }
+    margin-right: 240px; }
+  .click_label {
+    -webkit-transform: translateX(-40%);
+        -ms-transform: translateX(-40%);
+            transform: translateX(-40%); } }
 
 @media screen and (max-width: 1040px) {
   .jumbotron {
     margin-left: -30px; }
     .jumbotron .c106 {
-      display: none; } }
+      display: none; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(-30%);
+          -ms-transform: translateX(-30%);
+              transform: translateX(-30%); } }
 
 @media screen and (max-width: 1020px) {
   .jumbotron {
@@ -1452,6 +1479,10 @@ header .masthead {
     margin-left: -50px; }
     .jumbotron .c104, .jumbotron .c105 {
       display: none; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(-20%);
+          -ms-transform: translateX(-20%);
+              transform: translateX(-20%); }
   .controls {
     margin-right: 210px; } }
 
@@ -1466,6 +1497,10 @@ header .masthead {
     margin-left: -70px; }
     .jumbotron .c102, .jumbotron .c103 {
       display: none; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(0%);
+          -ms-transform: translateX(0%);
+              transform: translateX(0%); }
   .controls {
     margin-right: 190px; } }
 
@@ -1473,7 +1508,11 @@ header .masthead {
   .jumbotron {
     margin-left: -80px; }
   .controls {
-    margin-right: 160px; } }
+    margin-right: 160px; }
+  .click_label {
+    -webkit-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+            transform: translateX(200%); } }
 
 @media screen and (max-width: 900px) {
   .jumbotron {
@@ -1494,6 +1533,10 @@ header .masthead {
 @media screen and (max-width: 820px) {
   .jumbotron {
     margin-left: -140px; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(20%);
+          -ms-transform: translateX(20%);
+              transform: translateX(20%); }
   .controls {
     margin-right: 100px; } }
 
@@ -1516,6 +1559,10 @@ header .masthead {
     margin-left: -170px; }
     .jumbotron .c89, .jumbotron .c90, .jumbotron .c91, .jumbotron .c92 {
       display: none; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(40%);
+          -ms-transform: translateX(40%);
+              transform: translateX(40%); }
   .controls {
     margin-right: 70px; } }
 
@@ -1540,6 +1587,10 @@ header .masthead {
 @media screen and (max-width: 660px) {
   .jumbotron {
     margin-left: -220px; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(50%);
+          -ms-transform: translateX(50%);
+              transform: translateX(50%); }
   .controls {
     margin-right: 30px; } }
 
@@ -1548,6 +1599,10 @@ header .masthead {
     margin-left: -230px; }
     .jumbotron .c87, .jumbotron .c88 {
       display: none; }
+    .jumbotron .click_label {
+      -webkit-transform: translateX(60%);
+          -ms-transform: translateX(60%);
+              transform: translateX(60%); }
   .controls {
     margin-right: 20px; } }
 

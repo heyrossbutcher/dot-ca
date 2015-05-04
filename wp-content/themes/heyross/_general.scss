@@ -59,18 +59,15 @@ section{
   color: $default;
   font-size: 1.3rem;
   padding: 8px 25px;
-  // text-transform:  ;
   .phone-number{
     margin-left: 6px;
     color: $default;
-    // letter-spacing: 0.5px;
   }
 }
 .social{
   float: left;
   max-width: 100%;
   margin-top: 3px;
-  // margin-top: 38px;
   .social_btns{
     float: left;
     text-align: right;
@@ -80,7 +77,6 @@ section{
   }
   .connect{
     font-size:1.6rem;
-    // text-transform: uppercase;
     margin-top: 15px;
     padding-left:0;
     color: $black;
@@ -167,15 +163,16 @@ header{
 }
 .jumbotron_static{
   max-width: 1100px;
-  height: 300px;
+  height: 200px;
   background: $black;
   margin: 0;
   padding: 0;
   margin-top: 120px;
   position: relative;
   display: none;
-  background-image: url("http://localhost:8888/001Portfolio/wp-content/themes/heyross/img/banner_img.jpg");
+  background-image: url("http://localhost:8888/001Portfolio/wp-content/themes/heyross/img/banner_img.png");
   background-position: 50% 50%;
+  background-size: cover;
 }
 
 ///ABOUT//////////////////////////
@@ -376,8 +373,20 @@ header{
 }
 .contact{
   margin-top: 100px;
+  a{
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 400;
+      text-decoration: none;
+      padding-bottom: 1px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      &:hover{
+        border-bottom: 1px solid $lightgray;
+        color: $lightgray;
+          text-decoration: none;
+      }
+    }
   .intro{
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   .wpcf7-form{
     width: 100%;
@@ -432,6 +441,10 @@ header{
 .thanks{
   margin-top: 100px;
   margin-bottom: 100px;
+  .all_the_best{
+    font-size: 2rem;
+    text-align: center;
+  }
   h2{
     margin-bottom: 35px;
   }
