@@ -52,64 +52,72 @@ app.randCol = function(){
 app.mes_ctr = 0;
 //MAKE THE GRID CHANGE
 app.gridWipe = function(message){
-	app.mes_pattern = app.gridPattern[message];
-	//
-	var i = 0;
-	// 
-	app.colourRan = app.randCol();//Get the random colour
-	//
-	for (var n = 1; n <= 30; n++) {//run through the rows
+		app.mes_pattern = app.gridPattern[message];
 		//
-		for (var i = 1; i <= 110; i++) {//run through the column
+		var i = 0;
+		// 
+		app.colourRan = app.randCol();//Get the random colour
+		//
+		for (var n = 1; n <= 30; n++) {//run through the rows
 			//
-			(function(i,n){//Start closure 
+			for (var i = 1; i <= 110; i++) {//run through the column
 				//
-				app.timeOut = setTimeout(function () { //start the delay for the wipe effect 
-					app.grabSquare = $('.c' + i + '.r' + n);//get the divs class name
+				(function(i,n){//Start closure 
 					//
-					//Create the array to check for the overall div number
-					app.getClassnames();
-					//
-					//Check the div class against the arrays to find the exceptions
-					if( (new RegExp( '\\b' + app.mes_pattern.join('\\b|\\b') + '\\b') ).test(app.griddy[4]) ){
-						app.grabSquare.addClass('bg_blank');
-					}
-					else{
-						app.putColour = app.grabSquare.addClass(app.gridList[app.mes_ctr]);
-						console.log('COLOUR: ' + app.mes_ctr);
-					}
-				}, 25 * i);//end settimeout
-			}(i,n));//End closure
+					app.timeOut = setTimeout(function () { //start the delay for the wipe effect 
+						app.grabSquare = $('.c' + i + '.r' + n);//get the divs class name
+						//
+						//Create the array to check for the overall div number
+						app.getClassnames();
+						//
+						//Check the div class against the arrays to find the exceptions
+						if( (new RegExp( '\\b' + app.mes_pattern.join('\\b|\\b') + '\\b') ).test(app.griddy[4]) ){
+							app.grabSquare.addClass('bg_blank');
+						}
+						else{
+							app.putColour = app.grabSquare.addClass(app.gridList[app.mes_ctr]);
+							console.log('COLOUR: ' + app.mes_ctr);
+						}
+					}, 25 * i);//end settimeout
+				}(i,n));//End closure
+			};
 		};
 	};
-};
 //SET THE GRID WIPE INTERVAL
 app.gridRefresh = function(){
-	app.gridWipe(app.mes_ctr);
-	app.mes_ctr++;
-	//
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		app.mess_thres = 4;
-	} else {
+	if ( app.mobileCheck ){
+		// app.hdr = 95;
+		// $('.jumbotron').addClass('hide');
+		// $('.jumbotron_static').addClass('unhide');
+		// app.hdr = 75;
+		// $('.top_nav').addClass('main-nav-scrolled');
+		// $('.about').removeClass('offset');
+		// $('.about').addClass('offsetMobile');
+		// // $('.aboutWrapper').addClass('mobileTop');
+	}else{
+		app.gridWipe(app.mes_ctr);
+		app.mes_ctr++;
 		app.mess_thres = 5;
-	}
-	//
-	if ( app.mes_ctr >= app.mess_thres ) {
-		console.log('CLEAR INTERVAL!!!!!!');
-		clearInterval(app.rotateMessage);
 		//
-		app.delayDraw = setTimeout(function () { 
-			$('.draw_btn').removeClass('hide');
-			$('.click_label').removeClass('hide');
-			app.keying();
-		}, 3500);
+		if ( app.mes_ctr >= app.mess_thres ) {
+			console.log('CLEAR INTERVAL!!!!!!');
+			clearInterval(app.rotateMessage);
+			//
+			app.delayDraw = setTimeout(function () { 
+				$('.draw_btn').removeClass('hide');
+				$('.click_label').removeClass('hide');
+				app.keying();
+			}, 3500);
+		}
 		
 	}
 };
 //CALL THE GRID WIPE SEQUENCE
 app.gridMessage = function(){
-	app.gridRefresh();
-	app.rotateMessage = setInterval (app.gridRefresh, 3000);
+	if ( !app.mobileCheck ){
+		app.gridRefresh();
+		app.rotateMessage = setInterval (app.gridRefresh, 3000);
+	}
 };
 //////////////////
 //DRAW ON THE GRID

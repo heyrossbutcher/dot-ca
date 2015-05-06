@@ -67,7 +67,7 @@
     <!-- Check if Front-page or inner page -->
     <div class="wrapper" id="jumbotron">
       <?php if(is_front_page()) : ?>
-        <div class="jumbotron_static"> </div>
+        <div class="jumbotron_static"></div>
         
         <div class="jumbotron">
             <div class="click_label hide">Click to begin</div>
@@ -75,19 +75,25 @@
               <div class="controls">
                 <div class="draw key_btns">Tap <span class="letter_border d"><span class="inner_border">D</span></span> and draw</div>
                 <div class="erase key_btns">Tap <span class="letter_border e"><span class="inner_border">E</span></span> and erase</div>
-                <div class="refine key_btns">Tap <span class="letter_border c"><span class="inner_border">R</span></span> and click to refine</div>
+                <div class="refine key_btns">Tap <span class="letter_border r"><span class="inner_border">R</span></span> and click to refine</div>
                 <div class="refine key_btns"><span class="letter_border reset">Clear</span></div>
               </div>
             </div>
             <div class="draw_btn hide"></div>
         </div>
         <nav class="top_nav clearfix">
+          <div class="nav_shower hide">
+            <i class="fa fa-bars"></i>
+          </div>
           <div class="main_nav">
             <?php wp_nav_menu( 'main-nav' ); ?><!-- Load in navigation -->
           </div>
         </nav>
       <?php else :?>
         <nav class="post_nav clearfix main-nav-scrolled">
+          <div class="nav_shower hide">
+            <i class="fa fa-bars"></i>
+          </div>
           <div class="main_nav">
             <?php wp_nav_menu( 'inner_nav' ); ?><!-- Load in navigation -->
           </div>

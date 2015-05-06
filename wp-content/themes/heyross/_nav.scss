@@ -9,6 +9,23 @@
   max-width: 1100px;
   display: block;
 }
+.nav_shower{
+  display: none;
+  padding: 5px 0; 
+  border-top: $borderOne;
+  border-bottom: $borderOne;
+  text-align: center;
+  font-size: 1.3rem;
+  color: $lightgray;
+  &:hover{
+    background: $black;
+    color: $default;
+  }
+}
+.nav_shower_on{
+  background: $black;
+  color: $default;
+}
 nav{
   max-width: 760px;
   margin: 0 auto;

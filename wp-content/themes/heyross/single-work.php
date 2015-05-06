@@ -53,8 +53,8 @@ get_header(); ?>
                       <?php $subImage = get_sub_field('image_series'); ?>
                       <?php $subLink = get_sub_field('video_series'); ?>
                       <?php $borderCheck = get_sub_field('border_boolean'); ?>
+                      <?php $subText = get_sub_field('text_series'); ?>
                         <?php if($borderCheck) : ?><!-- START Border check -->
-
                           <?php if($subLink) : ?><!-- START IF statement checks if there's a custom link for the image -->
                             <div class="secondary-image work-image border-it">                          
                               <a href="<?php the_sub_field('video_series'); ?>" target="_">
@@ -62,6 +62,16 @@ get_header(); ?>
                                 <img src="<?php echo $subImage[url]; ?>"  >
                               </a>
                             </div>
+
+                              <?php if($subText) : ?>
+                                <div class="secondary-copy">
+                                  <p><?php the_sub_field('text_series'); ?></p>
+                                  <p class="sec-link"><a href="<?php the_sub_field('video_series'); ?>" target="_">Click to view</a></p>
+                                </div>
+                               <?php else :?>
+                                   <p></p>
+                               <?php endif ?>
+
                           <?php else :?>
                               <div class="secondary-image view-image border-it">
                                 <a href="<?php echo $subImage[url]; ?>" target="_">
@@ -69,6 +79,14 @@ get_header(); ?>
                                   <img src="<?php echo $subImage[url]; ?>" >
                                 </a>
                               </div> 
+                              <?php if($subText) : ?>
+                                <div class="secondary-copy">
+                                  <p><?php the_sub_field('text_series'); ?></p>
+                                  <p class="sec-link"><a href="<?php echo $subImage[url]; ?>" target="_">Click to view</a></p>
+                                </div>
+                               <?php else :?>
+                                   <p></p>
+                               <?php endif ?>
                           <?php endif ?><!-- END Custom link -->
 
                         <?php else :?>
@@ -80,6 +98,14 @@ get_header(); ?>
                                 <img src="<?php echo $subImage[url]; ?>"  >
                               </a>
                             </div>
+                            <?php if($subText) : ?>
+                              <div class="secondary-copy">
+                                <p><?php the_sub_field('text_series'); ?></p>
+                                <p class="sec-link"><a href="<?php the_sub_field('video_series'); ?>" target="_">Click to view</a></p>
+                              </div>
+                             <?php else :?>
+                                 <p></p>
+                             <?php endif ?>
                           <?php else :?>
                               <div class="secondary-image view-image">
                                 <a href="<?php echo $subImage[url]; ?>" target="_">
@@ -87,21 +113,22 @@ get_header(); ?>
                                   <img src="<?php echo $subImage[url]; ?>" >
                                 </a>
                               </div> 
+                              <?php if($subText) : ?>
+                                <div class="secondary-copy">
+                                  <p><?php the_sub_field('text_series'); ?></p>
+                                  <p class="sec-link"><a href="<?php echo $subImage[url]; ?>" target="_">Click to view</a></p>
+                                </div>
+                               <?php else :?>
+                                   <p></p>
+                               <?php endif ?>
                           <?php endif ?><!-- END Custom link -->
 
                         <?php endif ?><!-- END Border check -->
-                        <?php $subText = get_sub_field('text_series'); ?>
+                       
                           <!-- This IF statement checks if there's a custom text for the image -->
-                        <?php if($subText) : ?>
-                        <div class="secondary-copy">
-                              <p><?php the_sub_field('text_series'); ?></p>
-                              <p class="sec-link"><a href="<?php echo $subImage[url]; ?>" target="_">Click to view</a></p>
-                        </div>
-                           <?php else :?>
-                               <p></p>
-                           <?php endif ?>
-                         
-                    <?php endwhile //end sub fields loop ?>
+                        
+                        
+                      <?php endwhile //end sub fields loop ?>
                   </div>
 
                 </div><!-- #post-## -->

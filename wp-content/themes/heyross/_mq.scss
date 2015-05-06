@@ -236,6 +236,12 @@
     }
   }
 @media screen 
+  and (max-width: 900px) {
+  .work_img .work_copy {
+    width: 65%;
+  }
+}
+@media screen 
   and (max-width: 768px) {
      .aboutWrapper, .thanksWrapper, .contactWrapper {
       padding: 0 30px;
@@ -244,7 +250,7 @@
       padding-left: 25px;
     }
     .work_img .work_copy{
-      width: 60%;
+      width: 70%;
     }
     .work_img .work_copy .work_link a{
       margin-left: 25px;
@@ -309,6 +315,10 @@
       padding: 20px 0;
       padding-left: 20px;
     }
+    .work_img .work_copy .work_excerpt p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
   }
   @media screen 
     and (max-width: 520px) {
@@ -338,6 +348,15 @@
       }
       .connect {
         display: none;
+      }
+      .work_img .work_copy h4 {
+       // font-size: 2.2rem;
+       display: none;
+      }
+      .work_img .work_copy .work_excerpt p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-top: 25px;
       }
     }
   @media screen 
@@ -375,10 +394,7 @@
        .work_img .work_copy{
          width: 85%;
        }
-       .work_img .work_copy h4 {
-        // font-size: 2.2rem;
-        display: none;
-       }
+
        .work_img .work_copy .work_link a{
         margin-top: 0;
         margin-left: 0;
@@ -488,28 +504,6 @@
   }
 
 }
- // ----------- Non-Retina Screens ----------- 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-}
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-}
-
- // ----------- iPad 3 and 4 ----------- 
- // Portrait and Landscape 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-//
 ////////////////////////////////
 //WORK EXAMPLE MEDIA QUERIES
 ////////////////////////////////
@@ -640,12 +634,15 @@
           // width: 48%;
           margin-right: 0;
         }
+         .my_post h2 {
+            padding: 0 15px;
+          }
     }
   @media screen 
     and (max-width: 320px) {
 
       .my_post h2 {
-        font-size: 2.5rem;
+        // font-size: 2.5rem;
       }
       .enlarge-image p, .blog-click p {
         top: 35%;
@@ -723,6 +720,9 @@
 }
 @media screen 
     and (max-width: 320px) {
+      .my_post {
+        margin-top: 130px;
+      }
       .my_post .innerWrapper{
         padding: 0 15px;
       }
@@ -749,6 +749,10 @@
         max-width: 130px;
         // line-height: 1.8rem;
       }
+      .navigation .nav-next a {
+        max-width: 130px;
+        // line-height: 1.8rem;
+      }
       .my_post .entry-content blockquote {
         line-height: 2.4rem;
       }
@@ -758,5 +762,272 @@
       #respond textarea {
         height: 100px;
       }
+      .main_nav{
+        display: none;
+      }
+      header .masthead {
+        top: 0;
+        height: 80px;
+      }
+      .logo {
+        margin-top: 20px;
+      }
+      .connect_me {
+        margin-top: -6px;
+      }
+      nav {
+        top: 80px;
+      }
+      .main-nav-scrolled {
+        top: 80px;
+      }
+      .aboutPush{
+        margin-top: 80px;
+      }
+      .nav_shower{
+        display: block;
+      }
+}
+ // ----------- Non-Retina Screens ----------- 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
 
+ // ----------- iPad 3 and 4 ----------- 
+ // Portrait and Landscape 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
+//* ----------- Galaxy Tab 10.1 ----------- */
+//
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
+//* ----------- Asus Nexus 7 ----------- */
+
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
+
+//* Portrait */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: portrait) {
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
+
+//* Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: landscape) {
+    .jumbotron_static{
+      display: block;
+      height: 300px;
+    }
+    .jumbotron{
+      display: none;
+    }
+}
+//* ----------- Galaxy S3 ----------- */
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+    .jumbotron_static{
+      display: none;
+    }
+    .jumbotron{
+      display: none;
+    }
+    header{
+      .masthead{
+        height: 120px;
+        }
+    }
+    .main_nav{
+      display: none;
+    }
+  }
+//* ----------- Galaxy S4 ----------- */
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    .jumbotron_static{
+      display: none;
+    }
+    .jumbotron{
+      display: none;
+    }
+    header{
+      .masthead{
+        height: 120px;
+        }
+    }}
+//* ----------- Galaxy S5 ----------- */
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    .jumbotron_static{
+      display: none;
+    }
+    .jumbotron{
+      display: none;
+    }
+    header{
+      .masthead{
+        height: 120px;
+        }
+    }}
+//* ----------- Galaxy S3 ----------- */
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 640px) 
+  and (device-height: 320px) 
+  and (-webkit-device-pixel-ratio: 2) {
+    .jumbotron_static{
+      display: none;
+    }
+    .jumbotron{
+      display: none;
+    }
+    nav {
+      position: fixed;
+      top: 119px;
+      width: 100%;
+      display: block;
+      margin-top: 0;
+    }
+
+    .aboutPush{
+       margin-top: 140px;
+    }
+    header{
+      .masthead{
+        height: 120px;
+      }
+    }
+}
+//* ----------- Galaxy S4 ----------- */
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 640px) 
+  and (device-height: 320px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    .jumbotron_static{
+      display: none;
+    }
+    .jumbotron{
+      display: none;
+    }
+    nav {
+      position: fixed;
+      top: 119px;
+      width: 100%;
+      display: block;
+      margin-top: 0;
+    }
+
+    .aboutPush{
+       margin-top: 140px;
+    }
+    header{
+      .masthead{
+        height: 120px;
+      }
+    }
+}
+//* ----------- Galaxy S5 ----------- */
+//* Portrait and Landscape */
+@media screen 
+  and (device-width: 640px) 
+  and (device-height: 360px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    .jumbotron_static{
+      display: none;
+    }
+    .jumbotron{
+      display: none;
+    }
+    nav {
+      position: fixed;
+      top: 119px;
+      width: 100%;
+      display: block;
+      margin-top: 0;
+    }
+
+    .aboutPush{
+       margin-top: 140px;
+    }
+    header{
+      .masthead{
+        height: 120px;
+      }
+    }
 }

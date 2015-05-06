@@ -1,0 +1,15 @@
+// _mobile.scss
+//
+.mobileTop{
+	margin-top: 500px;
+}
+.offsetMobile:before { 
+ display: block; 
+ content: " "; 
+ height: 150px;      // Give height of your fixed element 
+  margin-top: -250px; // Give negative margin of your fixed element    
+  visibility: hidden; 
+}
+.navTop{
+	top:0!important;
+}

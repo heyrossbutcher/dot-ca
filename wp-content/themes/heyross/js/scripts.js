@@ -1,5 +1,17 @@
-
-
+//////////////////
+//DEVICE CHECK
+//////////////////
+app.device_check = function(){
+		console.log('checking');
+	if( /Android|webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		app.mobileCheck = true;
+		console.log('mobile');
+		
+	} else {
+		app.mobileCheck = false;
+		console.log('desktop');
+	}
+}
 //////////////////
 //NAV
 //////////////////
@@ -12,27 +24,25 @@ app.scroll_checker = function(){
 		app.hdr = 320;
 		// console.log('320!!!!!!!!!!!!!!');
 	}
-	if( $(window).scrollTop() > app.hdr ) {
-	  app.mn.addClass(app.mns);
-	  app.cn.addClass(app.cnp);
-	} else {
-	  app.mn.removeClass(app.mns);
-	  app.cn.removeClass(app.cnp);
-	};
-}
+		if( $(window).scrollTop() > app.hdr ) {
+		  app.mn.addClass(app.mns);
+		  app.cn.addClass(app.cnp);
+		  $('.about').removeClass('push');
+		} else {
+		  app.mn.removeClass(app.mns);
+		  app.cn.removeClass(app.cnp);
+		};
+	}
 //STICKY NAV FUNCTIONALITY
 app.mn = $('.top_nav');
 app.mns = 'main-nav-scrolled';
 app.cn = $('.content');
 app.cnp = 'push';
-
-
-
 //
 $(window).scroll(function() {
   app.scroll_checker();
   app.win = $(this).scrollTop();
-  app.about = $( ".thoughts" ).offset().top;
+  app.about = $( ".about" ).offset().top;
   app.scrollNum = app.about - app.win;
 });
 //END STICKY NAV
@@ -112,8 +122,26 @@ app.mouseEvent = function(){
 		app.startDrawing();
 		clearInterval(app.delayDraw);
 	});
+	//
 	$('.reset').on('click', function(){
 		app.gridReset();
+	});
+	$('.d').on('click', function(){
+		app.brush = 'draw';
+	});
+	$('.e').on('click', function(){
+		app.brush = 'erase';
+	});
+	$('.r').on('click', function(){
+		app.brush = 'refine';
+	});
+	//
+	app.pullUp = $('.about .wrapper');
+	$('.nav_shower').on('click', function(){
+		console.log('Unhide nav')
+		$(this).toggleClass('nav_shower_on');
+		$('.main_nav').toggleClass('unhide');
+		$(app.pullUp).toggleClass('aboutPull').toggleClass('aboutPush');
 	});
 };
 //
@@ -131,6 +159,7 @@ app.init = function(){
 //DOCUMENT READY
 //////////////////
 $(function() {
+	app.device_check();
 	app.makeGrid();
 	app.init();
 	FastClick.attach(document.body);

@@ -9,6 +9,9 @@ $borderFaint: 1px solid $faintgray;
 .hide{
 	display: none;
 }
+.unhide{
+	display: block!important;
+}
 .makeWhite{
 	color: #fff!important;
 }
@@ -26,4 +29,11 @@ $borderFaint: 1px solid $faintgray;
 }
 .border-it{
 	border: $borderFaint;
+}
+//
+.mobileTop{
+	margin-top: 500px;
+}
+.aboutPull {
+  margin-top: 120px!important;
 }
