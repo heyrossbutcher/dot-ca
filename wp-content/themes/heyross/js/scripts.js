@@ -149,18 +149,25 @@ app.mouseEvent = function(){
 //INIT FUNCTION
 //////////////////
 app.init = function(){
-	app.work_piece();
-	app.scroll_checker();
-	app.smoothScroller();
-	app.gridMessage();
-	app.mouseEvent();
+	if(app.mobileCheck){
+		app.work_piece();
+		app.scroll_checker();
+		app.smoothScroller();
+		app.mouseEvent();
+	}else{
+		app.makeGrid();
+		app.work_piece();
+		app.scroll_checker();
+		app.smoothScroller();
+		app.gridMessage();
+		app.mouseEvent();
+	}
 };
 //////////////////
 //DOCUMENT READY
 //////////////////
 $(function() {
 	app.device_check();
-	app.makeGrid();
 	app.init();
 	FastClick.attach(document.body);
 	//
